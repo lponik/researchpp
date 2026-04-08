@@ -1,146 +1,137 @@
 {
-  "What are the key factors influencing employee productivity in telecommuting environments?": [
+  "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?": [
     {
-      "subquestion": "What are the key factors influencing employee productivity in telecommuting environments?",
-      "source_title": "What are the key factors influencing productivity in a telework ...",
-      "source_url": "https://blogs.psico-smart.com/blog-what-are-the-key-factors-influencing-productivity-in-a-telework-environment-13545",
-      "key_point": "Effective communication and clear expectations enhance productivity.",
-      "evidence": "Companies like GitLab emphasize setting clear goals and using asynchronous communication to improve remote work productivity.",
-      "relevance_reason": "Highlights the importance of communication and clarity in a telecommuting setting.",
+      "subquestion": "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?",
+      "source_title": "Balancing Cost and Performance: A Comparative Study of RAG and ...",
+      "source_url": "https://ai.plainenglish.io/balancing-cost-and-performance-a-comparative-study-of-rag-and-long-context-llms-f674f2a1bbf4",
+      "key_point": "Long context yields better results at higher costs.",
+      "evidence": "Long context gets better results for each model than RAG.",
+      "relevance_reason": "Directly compares the outcomes and efficiency of RAG vs long-context prompting.",
       "confidence_score": null
     },
     {
-      "subquestion": "What are the key factors influencing employee productivity in telecommuting environments?",
-      "source_title": "7 Key Factors Influencing Remote Work Engagement",
-      "source_url": "https://adoraikwuemesi.com/7-key-factors-influencing-remote-work-engagement-what-every-leader-should-know/",
-      "key_point": "Comfortable work environment boosts productivity.",
-      "evidence": "Remote workers with comfortable chairs and good lighting are more productive.",
-      "relevance_reason": "Identifies physical environment factors as influential in remote work productivity.",
+      "subquestion": "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?",
+      "source_title": "What Is Flat-Rate Long-Context Pricing? How Anthropic Changed ...",
+      "source_url": "https://www.mindstudio.ai/blog/flat-rate-long-context-pricing-anthropic-claude/",
+      "key_point": "RAG's total cost can exceed that of long-context approaches in certain scenarios.",
+      "evidence": "The total cost of owning a RAG pipeline often exceeds the token cost of a long-context approach for low-volume queries.",
+      "relevance_reason": "Explains when RAG may be less economical compared to long-context prompting.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?",
+      "source_title": "What Is Flat-Rate Long-Context Pricing? How Anthropic Changed ...",
+      "source_url": "https://www.mindstudio.ai/blog/flat-rate-long-context-pricing-anthropic-claude/",
+      "key_point": "Flat-rate pricing in long-context prevents cost escalation based on prompt length.",
+      "evidence": "Flat-rate pricing removes the depth penalty and charges the same per-token rate at every position in the context window.",
+      "relevance_reason": "Highlights an advantage of long-context approaches in managing costs.",
       "confidence_score": null
     }
   ],
-  "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?": [
+  "How does latency differ between RAG and long-context prompting in real-world applications?": [
     {
-      "subquestion": "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?",
-      "source_title": "[PDF] Effect of teleworking on employee satisfaction during and post-covid ...",
-      "source_url": "https://www.managementjournals.net/assets/archives/2025/vol7issue1/7004.pdf",
-      "key_point": "Impact on employee satisfaction levels",
-      "evidence": "The study analyzes teleworking during and after the COVID-19 pandemic and its impact on employee satisfaction levels within IHM Southern Africa.",
-      "relevance_reason": "The evidence directly relates to the effect of telecommuting on employee satisfaction during COVID-19.",
+      "subquestion": "How does latency differ between RAG and long-context prompting in real-world applications?",
+      "source_title": "RAG vs Large Context Window: Real Trade-offs for AI Apps - Redis",
+      "source_url": "https://redis.io/blog/rag-vs-large-context-window-ai-apps/",
+      "key_point": "RAG achieves lower latency for interactive use cases.",
+      "evidence": "Well-optimized RAG pipelines can often maintain response times under 2 seconds, while naive long-context prompting may struggle with larger inputs.",
+      "relevance_reason": "Directly compares latency performance of RAG and long-context models in real applications.",
       "confidence_score": null
     },
     {
-      "subquestion": "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?",
-      "source_title": "[PDF] The Impact of Remote Work on Employee Job Satisfaction in the ...",
-      "source_url": "https://e-research.siam.edu/wp-content/uploads/2026/01/MBA-2025-IS-Moe-Moe-Myint-6517192010-The-Impact-of-Remote-Work.pdf",
-      "key_point": "Examines remote work's relationship with job satisfaction",
-      "evidence": "The study investigates the relationship between remote work and employee job satisfaction, focusing on factors influencing employee health and happiness.",
-      "relevance_reason": "It specifically targets job satisfaction changes due to remote work during the pandemic.",
+      "subquestion": "How does latency differ between RAG and long-context prompting in real-world applications?",
+      "source_title": "Long Context vs RAG for Real Apps - Compute with Hivenet",
+      "source_url": "https://compute.hivenet.com/post/long-context-vs-rag",
+      "key_point": "Long context models can manage extensive inputs in one go.",
+      "evidence": "Long-context LLMs handle context windows up to a million tokens, allowing them to maintain an overview of large data sets during a single inference.",
+      "relevance_reason": "Highlights how long-context models manage data differently, implying potential latency impact.",
       "confidence_score": null
     },
     {
-      "subquestion": "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?",
-      "source_title": "Remote Work Statistics: Key Trends & Facts You Should Know in 2026",
-      "source_url": "https://www.runn.io/blog/remote-work-statistics",
-      "key_point": "Remote work increases employee happiness",
-      "evidence": "84% of people feel that remote and hybrid work modes make them happier, with 81% stating it improves work-life balance.",
-      "relevance_reason": "This statistic supports the positive impact of telecommuting on job satisfaction during the pandemic.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?",
-      "source_title": "Remote Work Statistics: Key Trends & Facts You Should Know in 2026",
-      "source_url": "https://www.runn.io/blog/remote-work-statistics",
-      "key_point": "Remote work boosts employee morale",
-      "evidence": "91% of people report an increase in morale when offered flexible working schedules.",
-      "relevance_reason": "This evidence highlights how telecommuting options during the pandemic contributed to job satisfaction by enhancing morale.",
+      "subquestion": "How does latency differ between RAG and long-context prompting in real-world applications?",
+      "source_title": "RAG vs Long-Context LLMs: Approaches for Real-World Applications",
+      "source_url": "https://www.premai.io/blog/rag-vs-long-context-llms-approaches-for-real-world-applications",
+      "key_point": "RAG enhances speed with selective retrieval.",
+      "evidence": "RAG retrieves relevant external documents dynamically, which may reduce latency compared to processing all context in long-context models.",
+      "relevance_reason": "Clarifies how RAG's mechanism may contribute to lower latency by avoiding unnecessary processing.",
       "confidence_score": null
     }
   ],
-  "What specific challenges do employees face while working remotely compared to traditional office settings?": [
+  "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?": [
     {
-      "subquestion": "What specific challenges do employees face while working remotely compared to traditional office settings?",
-      "source_title": "Top Remote Work Challenges and Solutions You Need To Know",
-      "source_url": "https://www.nextiva.com/blog/remote-work-challenges.html",
-      "key_point": "Remote employees face pressure to always be available.",
-      "evidence": "Remote employees report working longer hours and feeling an implicit expectation to be ‘always on.’ They check their email 40% more frequently outside of standard work hours compared to office-based employees.",
-      "relevance_reason": "Highlights the pressure and mental fatigue remote workers experience due to blurred boundaries between work and personal life.",
+      "subquestion": "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?",
+      "source_title": "How to Evaluate RAG Systems: Metrics, Methods, and What ... - Comet",
+      "source_url": "https://www.comet.com/site/blog/rag-evaluation/",
+      "key_point": "Key evaluation metrics for RAG include context precision and context recall.",
+      "evidence": "Context precision penalizes systems for ranking relevant documents lower; context recall measures if the retriever surfaced all relevant information needed for answers.",
+      "relevance_reason": "Offers direct metrics for evaluating answer quality relevant to RAG systems.",
       "confidence_score": null
     },
     {
-      "subquestion": "What specific challenges do employees face while working remotely compared to traditional office settings?",
-      "source_title": "Remote Workers face Challenges in the Hybrid Office - GoBright",
-      "source_url": "https://gobright.com/blogs-and-articles/remote-workers-face-challenges-in-the-hybrid-office/",
-      "key_point": "Difficulty in setting work-life boundaries.",
-      "evidence": "25% of remote employees struggle with unplugging, indicating challenges in setting boundaries toward work.",
-      "relevance_reason": "Identifies a specific issue that contributes to the challenges of remote work compared to traditional office environments.",
+      "subquestion": "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?",
+      "source_title": "Evaluating The Quality Of RAG & Long-Context LLM Output",
+      "source_url": "https://cobusgreyling.substack.com/p/evaluating-the-quality-of-rag-and",
+      "key_point": "Salesforce evaluated multiple LLMs and RAG systems, indicating challenges in specific metrics.",
+      "evidence": "Their results show SummHay is still a challenge, highlighting the complexity in evaluating long-context outputs and RAG.",
+      "relevance_reason": "Provides insights into the evaluation landscape for RAG and long-context prompting systems.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?",
+      "source_title": "What metrics are you actually using to evaluate RAG quality? And ...",
+      "source_url": "https://www.reddit.com/r/Rag/comments/1ri0mnl/what_metrics_are_you_actually_using_to_evaluate/",
+      "key_point": "Evaluation based on percentage of literal keyword hits can be informative.",
+      "evidence": "Requires defining a list of expected keywords per response to assess the accuracy of RAG outputs.",
+      "relevance_reason": "Suggests a specific metric that can be applied in RAG evaluation.",
       "confidence_score": null
     }
   ],
-  "How do different telecommuting models (full-time vs. hybrid) affect employee engagement and performance?": [
+  "Are there specific use cases where one approach significantly outperforms the other?": [
     {
-      "subquestion": "How do different telecommuting models (full-time vs. hybrid) affect employee engagement and performance?",
-      "source_title": "Return To Office Vs Hybrid Vs Remote In 2026 | Corporate Navigators",
-      "source_url": "https://www.corporatenavigators.com/articles/hr-trends/return-to-office-hybrid-vs-remote-whats-best/",
-      "key_point": "Hybrid models provide flexibility while enhancing work-life balance.",
-      "evidence": "The hybrid work model brings in the benefits of remote and in-person work into a balanced work model that offers more flexibility for work-life balance.",
-      "relevance_reason": "Highlights the advantages of hybrid work in promoting engagement and flexibility.",
+      "subquestion": "Are there specific use cases where one approach significantly outperforms the other?",
+      "source_title": "Doing AI vs. Using AI: Two Approaches to Rationalize Adoption ...",
+      "source_url": "https://www.insight.com/en_US/content-and-resources/blog/doing-ai-vs-using-ai-two-approaches-to-rationalize-adoption-and-boost-roi.html",
+      "key_point": "Each method caters to specific requirements and resources.",
+      "evidence": "Both offer unique advantages and use cases.",
+      "relevance_reason": "This highlights the performance differences between two approaches in specific scenarios.",
       "confidence_score": null
     },
     {
-      "subquestion": "How do different telecommuting models (full-time vs. hybrid) affect employee engagement and performance?",
-      "source_title": "Employee engagement is up. Hybrid work – and teamwork",
-      "source_url": "https://www.adpresearch.com/employee-engagement-is-up-hybrid-work-and-teamwork-deserve-the-credit/",
-      "key_point": "Hybrid workers show higher engagement levels compared to on-site workers.",
-      "evidence": "Hybrid workers are 1.7 times more likely to be fully engaged than on-site workers.",
-      "relevance_reason": "Demonstrates the positive impact of hybrid work on employee engagement.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "How do different telecommuting models (full-time vs. hybrid) affect employee engagement and performance?",
-      "source_title": "Impact Of Hybrid And Remote Work On Employee Engagement And ...",
-      "source_url": "https://www.researchgate.net/publication/395661917_Impact_Of_Hybrid_And_Remote_Work_On_Employee_Engagement_And_Productivity",
-      "key_point": "Hybrid work leads to notably higher employee engagement.",
-      "evidence": "The descriptive analysis reveals that hybrid work employees tend to exhibit notably higher levels of reported engagement compared to those in full-time in-office roles.",
-      "relevance_reason": "Supports the claim that hybrid work enhances employee engagement levels.",
+      "subquestion": "Are there specific use cases where one approach significantly outperforms the other?",
+      "source_title": "How one approach to M&A is more likely to create value than all others",
+      "source_url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-one-approach-to-m-and-a-is-more-likely-to-create-value-than-all-others",
+      "key_point": "A programmatic approach is most likely to create value compared to other M&A strategies.",
+      "evidence": "When compared with other types of M&A strategies, a programmatic approach is most likely to create value.",
+      "relevance_reason": "This indicates that the programmatic approach has a superior performance in a specific context of M&A.",
       "confidence_score": null
     }
   ],
-  "What strategies can companies implement to enhance productivity and satisfaction among remote workers?": [
+  "What are the potential scalability issues associated with each of the methodologies?": [
     {
-      "subquestion": "What strategies can companies implement to enhance productivity and satisfaction among remote workers?",
-      "source_title": "Tools and Strategies That Will Work in 2026 - LinkedIn",
-      "source_url": "https://www.linkedin.com/pulse/future-remote-work-tools-strategies-2026-the-flock-co-qltae",
-      "key_point": "Use virtual team building platforms to measure engagement.",
-      "evidence": "Virtual team building platforms with measurable engagement enhance productivity and satisfaction among remote workers.",
-      "relevance_reason": "Engagement is crucial for productivity and overall job satisfaction in remote settings.",
+      "subquestion": "What are the potential scalability issues associated with each of the methodologies?",
+      "source_title": "What are the most common system scalability issues you encounter?",
+      "source_url": "https://www.linkedin.com/advice/0/what-most-common-system-scalability-issues-b0pqc",
+      "key_point": "Hardware limitations, software design, data management, and network are key scalability issues.",
+      "evidence": "1. Hardware limitations ; 2. Software design ; 3. Data management ; 4. Network",
+      "relevance_reason": "Identifies various common scalability issues pertinent to system methodologies.",
       "confidence_score": null
     },
     {
-      "subquestion": "What strategies can companies implement to enhance productivity and satisfaction among remote workers?",
-      "source_title": "8 Essential Remote Work Productivity Tips for 2026",
-      "source_url": "https://nearshorebusinesssolutions.com/news/remote-work-productivity-tips/",
-      "key_point": "Set clear digital communication boundaries.",
-      "evidence": "Setting digital communication boundaries can reduce interruptions and improve focus.",
-      "relevance_reason": "Clear expectations and minimized context switching are essential for maintaining productivity.",
+      "subquestion": "What are the potential scalability issues associated with each of the methodologies?",
+      "source_title": "Most Common Top 6 Challenges Faced During Scaling Agile",
+      "source_url": "https://premieragile.com/scaling-agile-challenges/",
+      "key_point": "Scaling Agile can be challenging due to lack of experience with large teams.",
+      "evidence": "Organizations and software engineers not experienced in Agile find it challenging to scale Agile.",
+      "relevance_reason": "Highlights specific challenges faced when scaling Agile methodologies.",
       "confidence_score": null
     },
     {
-      "subquestion": "What strategies can companies implement to enhance productivity and satisfaction among remote workers?",
-      "source_title": "7 Proven Strategies to Keep Remote Employees Engaged in 2026",
-      "source_url": "https://sparkbay.com/en/culture-blog/improve-remote-employee-engagement-14",
-      "key_point": "Establish clear goals and objectives for remote employees.",
-      "evidence": "Receiving clear goals and objectives improves remote employee engagement.",
-      "relevance_reason": "Engagement and alignment with business goals are critical for remote worker satisfaction.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "What strategies can companies implement to enhance productivity and satisfaction among remote workers?",
-      "source_title": "8 Essential Remote Work Productivity Tips for 2026",
-      "source_url": "https://nearshorebusinesssolutions.com/news/remote-work-productivity-tips/",
-      "key_point": "Create a dedicated workspace to enhance focus.",
-      "evidence": "A dedicated workspace can help improve focus and create a clear work-life boundary.",
-      "relevance_reason": "Physical and psychological separation of work spaces is vital for productivity.",
+      "subquestion": "What are the potential scalability issues associated with each of the methodologies?",
+      "source_title": "Scalability in System Design - GeeksforGeeks",
+      "source_url": "https://www.geeksforgeeks.org/system-design/what-is-scalability/",
+      "key_point": "Performance bottlenecks and resource utilization affect scalability.",
+      "evidence": "Factors Affecting Scalability · 1. Performance Bottlenecks · 2. Resource Utilization · 3. Network Latency · 4. Data Storage and Access",
+      "relevance_reason": "Discusses critical performance factors that influence scalability in system design methodologies.",
       "confidence_score": null
     }
   ]

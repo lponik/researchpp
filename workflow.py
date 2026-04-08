@@ -61,10 +61,20 @@ def _extractor_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
 
 
 def _writer_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
+    revision_instructions: list[str] | None = None
+    weak_sections: list[str] | None = None
+    if state.get("retry_count", 0) > 0:
+        review = state.get("review_decision")
+        if review is not None:
+            revision_instructions = review.revision_instructions
+            weak_sections = review.weak_sections
+
     report = generate_report(
         plan=state["plan"],
         extracted_notes=state["extracted_notes"],
         report_title=state.get("report_title"),
+        revision_instructions=revision_instructions,
+        weak_sections=weak_sections,
     )
 
     report_output = state.get("report_output")
@@ -93,8 +103,10 @@ def _reviewer_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
     }
 
 
-def _retry_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
-    # v1 retry strategy: rerun one additional full research pass for all subquestions.
+def _prepare_retry_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
+    review = state["review_decision"]
+    retry_reason = "search" if review.needs_more_research else "write"
+    print(f"Retry triggered: {retry_reason}")
     return {
         "retry_count": state.get("retry_count", 0) + 1,
         "retry_triggered": True,
@@ -102,17 +114,27 @@ def _retry_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
 
 
 def _route_after_review(state: ResearchWorkflowState) -> str:
-    decision = state["review_decision"]
+    review = state["review_decision"]
     retry_count = state.get("retry_count", 0)
     max_retries = state.get("max_retries", 1)
 
-    if decision.approved or not decision.needs_more_research:
-        return "finish"
+    if review.approved:
+        return "approved"
 
     if retry_count >= max_retries:
-        return "finish"
+        return "failed"
 
-    return "retry"
+    if review.needs_more_research:
+        return "retry_search"
+
+    return "retry_write"
+
+
+def _route_after_prepare_retry(state: ResearchWorkflowState) -> str:
+    review = state["review_decision"]
+    if review.needs_more_research:
+        return "retry_search"
+    return "retry_write"
 
 
 def _build_workflow():
@@ -123,7 +145,7 @@ def _build_workflow():
     graph.add_node("extractor", _extractor_node)
     graph.add_node("writer", _writer_node)
     graph.add_node("reviewer", _reviewer_node)
-    graph.add_node("retry", _retry_node)
+    graph.add_node("prepare_retry", _prepare_retry_node)
 
     graph.add_edge(START, "planner")
     graph.add_edge("planner", "searcher")
@@ -134,11 +156,20 @@ def _build_workflow():
         "reviewer",
         _route_after_review,
         {
-            "retry": "retry",
-            "finish": END,
+            "approved": END,
+            "retry_search": "prepare_retry",
+            "retry_write": "prepare_retry",
+            "failed": END,
         },
     )
-    graph.add_edge("retry", "searcher")
+    graph.add_conditional_edges(
+        "prepare_retry",
+        _route_after_prepare_retry,
+        {
+            "retry_search": "searcher",
+            "retry_write": "writer",
+        },
+    )
 
     return graph.compile()
 
@@ -165,7 +196,18 @@ def run_research_workflow(
         "report_output": report_output,
         "retry_triggered": False,
     }
-    final_state = _WORKFLOW.invoke(initial_state)
+    final_state = _WORKFLOW.invoke(
+        initial_state,
+        config={
+            "run_name": "researchpp_run",
+            "metadata": {
+                "query": user_query,
+                "max_results": max_results,
+                "max_notes": max_notes,
+                "max_retries": max_retries,
+            },
+        },
+    )
 
     # Keep a stable final artifact path for demos, regardless of retry behavior.
     final_report_path = Path(__file__).resolve().parent / "outputs" / "final_report.md"

@@ -1,6 +1,6 @@
-from pathlib import Path
-
 from dotenv import load_dotenv
+load_dotenv()
+
 import typer
 
 from reviewer import summarize_review_decision
@@ -24,9 +24,6 @@ def main(
         1, min=0, max=1, help="Maximum number of reviewer-triggered retry passes."
     ),
 ) -> None:
-    # Load environment variables for OpenAI credentials.
-    load_dotenv(dotenv_path=Path(__file__).with_name(".env"))
-
     try:
         state = run_research_workflow(
             user_query=query,

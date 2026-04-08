@@ -51,6 +51,8 @@ def generate_report(
     plan: ResearchPlan,
     extracted_notes: dict[str, list[EvidenceNote]],
     report_title: str | None = None,
+    revision_instructions: list[str] | None = None,
+    weak_sections: list[str] | None = None,
 ) -> str:
     """
     Generate a markdown report from structured plan + evidence notes.
@@ -88,6 +90,21 @@ def generate_report(
         for subquestion, notes in extracted_notes.items()
     }
 
+    revision_guidance_block = ""
+    if revision_instructions or weak_sections:
+        revision_guidance_block = f"""
+Retry revision guidance:
+- This is a reviewer-requested revision pass.
+- Address the revision instructions and weak sections explicitly.
+- Prioritize stronger grounding and clarity in the flagged areas.
+
+Revision instructions (JSON):
+{json.dumps(revision_instructions or [], indent=2, ensure_ascii=False)}
+
+Weak sections (JSON):
+{json.dumps(weak_sections or [], indent=2, ensure_ascii=False)}
+""".strip()
+
     prompt = f"""
 You are writing a final research report in markdown.
 
@@ -116,6 +133,8 @@ Research plan (JSON):
 
 Extracted evidence notes grouped by subquestion (JSON):
 {json.dumps(notes_payload, indent=2, ensure_ascii=False)}
+
+{revision_guidance_block}
 """.strip()
 
     try:
