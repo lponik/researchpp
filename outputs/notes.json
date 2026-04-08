@@ -1,13 +1,147 @@
 {
-  "sample question": [
+  "What are the key factors influencing employee productivity in telecommuting environments?": [
     {
-      "subquestion": "sample question",
-      "source_title": "Example",
-      "source_url": "https://example.com",
-      "key_point": "Key point",
-      "evidence": "Evidence text",
-      "relevance_reason": "Directly answers the sample question.",
-      "confidence_score": 0.8
+      "subquestion": "What are the key factors influencing employee productivity in telecommuting environments?",
+      "source_title": "What are the key factors influencing productivity in a telework ...",
+      "source_url": "https://blogs.psico-smart.com/blog-what-are-the-key-factors-influencing-productivity-in-a-telework-environment-13545",
+      "key_point": "Effective communication and clear expectations enhance productivity.",
+      "evidence": "Companies like GitLab emphasize setting clear goals and using asynchronous communication to improve remote work productivity.",
+      "relevance_reason": "Highlights the importance of communication and clarity in a telecommuting setting.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What are the key factors influencing employee productivity in telecommuting environments?",
+      "source_title": "7 Key Factors Influencing Remote Work Engagement",
+      "source_url": "https://adoraikwuemesi.com/7-key-factors-influencing-remote-work-engagement-what-every-leader-should-know/",
+      "key_point": "Comfortable work environment boosts productivity.",
+      "evidence": "Remote workers with comfortable chairs and good lighting are more productive.",
+      "relevance_reason": "Identifies physical environment factors as influential in remote work productivity.",
+      "confidence_score": null
+    }
+  ],
+  "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?": [
+    {
+      "subquestion": "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?",
+      "source_title": "[PDF] Effect of teleworking on employee satisfaction during and post-covid ...",
+      "source_url": "https://www.managementjournals.net/assets/archives/2025/vol7issue1/7004.pdf",
+      "key_point": "Impact on employee satisfaction levels",
+      "evidence": "The study analyzes teleworking during and after the COVID-19 pandemic and its impact on employee satisfaction levels within IHM Southern Africa.",
+      "relevance_reason": "The evidence directly relates to the effect of telecommuting on employee satisfaction during COVID-19.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?",
+      "source_title": "[PDF] The Impact of Remote Work on Employee Job Satisfaction in the ...",
+      "source_url": "https://e-research.siam.edu/wp-content/uploads/2026/01/MBA-2025-IS-Moe-Moe-Myint-6517192010-The-Impact-of-Remote-Work.pdf",
+      "key_point": "Examines remote work's relationship with job satisfaction",
+      "evidence": "The study investigates the relationship between remote work and employee job satisfaction, focusing on factors influencing employee health and happiness.",
+      "relevance_reason": "It specifically targets job satisfaction changes due to remote work during the pandemic.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?",
+      "source_title": "Remote Work Statistics: Key Trends & Facts You Should Know in 2026",
+      "source_url": "https://www.runn.io/blog/remote-work-statistics",
+      "key_point": "Remote work increases employee happiness",
+      "evidence": "84% of people feel that remote and hybrid work modes make them happier, with 81% stating it improves work-life balance.",
+      "relevance_reason": "This statistic supports the positive impact of telecommuting on job satisfaction during the pandemic.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "How has telecommuting during the COVID-19 pandemic affected overall job satisfaction among employees?",
+      "source_title": "Remote Work Statistics: Key Trends & Facts You Should Know in 2026",
+      "source_url": "https://www.runn.io/blog/remote-work-statistics",
+      "key_point": "Remote work boosts employee morale",
+      "evidence": "91% of people report an increase in morale when offered flexible working schedules.",
+      "relevance_reason": "This evidence highlights how telecommuting options during the pandemic contributed to job satisfaction by enhancing morale.",
+      "confidence_score": null
+    }
+  ],
+  "What specific challenges do employees face while working remotely compared to traditional office settings?": [
+    {
+      "subquestion": "What specific challenges do employees face while working remotely compared to traditional office settings?",
+      "source_title": "Top Remote Work Challenges and Solutions You Need To Know",
+      "source_url": "https://www.nextiva.com/blog/remote-work-challenges.html",
+      "key_point": "Remote employees face pressure to always be available.",
+      "evidence": "Remote employees report working longer hours and feeling an implicit expectation to be ‘always on.’ They check their email 40% more frequently outside of standard work hours compared to office-based employees.",
+      "relevance_reason": "Highlights the pressure and mental fatigue remote workers experience due to blurred boundaries between work and personal life.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What specific challenges do employees face while working remotely compared to traditional office settings?",
+      "source_title": "Remote Workers face Challenges in the Hybrid Office - GoBright",
+      "source_url": "https://gobright.com/blogs-and-articles/remote-workers-face-challenges-in-the-hybrid-office/",
+      "key_point": "Difficulty in setting work-life boundaries.",
+      "evidence": "25% of remote employees struggle with unplugging, indicating challenges in setting boundaries toward work.",
+      "relevance_reason": "Identifies a specific issue that contributes to the challenges of remote work compared to traditional office environments.",
+      "confidence_score": null
+    }
+  ],
+  "How do different telecommuting models (full-time vs. hybrid) affect employee engagement and performance?": [
+    {
+      "subquestion": "How do different telecommuting models (full-time vs. hybrid) affect employee engagement and performance?",
+      "source_title": "Return To Office Vs Hybrid Vs Remote In 2026 | Corporate Navigators",
+      "source_url": "https://www.corporatenavigators.com/articles/hr-trends/return-to-office-hybrid-vs-remote-whats-best/",
+      "key_point": "Hybrid models provide flexibility while enhancing work-life balance.",
+      "evidence": "The hybrid work model brings in the benefits of remote and in-person work into a balanced work model that offers more flexibility for work-life balance.",
+      "relevance_reason": "Highlights the advantages of hybrid work in promoting engagement and flexibility.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "How do different telecommuting models (full-time vs. hybrid) affect employee engagement and performance?",
+      "source_title": "Employee engagement is up. Hybrid work – and teamwork",
+      "source_url": "https://www.adpresearch.com/employee-engagement-is-up-hybrid-work-and-teamwork-deserve-the-credit/",
+      "key_point": "Hybrid workers show higher engagement levels compared to on-site workers.",
+      "evidence": "Hybrid workers are 1.7 times more likely to be fully engaged than on-site workers.",
+      "relevance_reason": "Demonstrates the positive impact of hybrid work on employee engagement.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "How do different telecommuting models (full-time vs. hybrid) affect employee engagement and performance?",
+      "source_title": "Impact Of Hybrid And Remote Work On Employee Engagement And ...",
+      "source_url": "https://www.researchgate.net/publication/395661917_Impact_Of_Hybrid_And_Remote_Work_On_Employee_Engagement_And_Productivity",
+      "key_point": "Hybrid work leads to notably higher employee engagement.",
+      "evidence": "The descriptive analysis reveals that hybrid work employees tend to exhibit notably higher levels of reported engagement compared to those in full-time in-office roles.",
+      "relevance_reason": "Supports the claim that hybrid work enhances employee engagement levels.",
+      "confidence_score": null
+    }
+  ],
+  "What strategies can companies implement to enhance productivity and satisfaction among remote workers?": [
+    {
+      "subquestion": "What strategies can companies implement to enhance productivity and satisfaction among remote workers?",
+      "source_title": "Tools and Strategies That Will Work in 2026 - LinkedIn",
+      "source_url": "https://www.linkedin.com/pulse/future-remote-work-tools-strategies-2026-the-flock-co-qltae",
+      "key_point": "Use virtual team building platforms to measure engagement.",
+      "evidence": "Virtual team building platforms with measurable engagement enhance productivity and satisfaction among remote workers.",
+      "relevance_reason": "Engagement is crucial for productivity and overall job satisfaction in remote settings.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What strategies can companies implement to enhance productivity and satisfaction among remote workers?",
+      "source_title": "8 Essential Remote Work Productivity Tips for 2026",
+      "source_url": "https://nearshorebusinesssolutions.com/news/remote-work-productivity-tips/",
+      "key_point": "Set clear digital communication boundaries.",
+      "evidence": "Setting digital communication boundaries can reduce interruptions and improve focus.",
+      "relevance_reason": "Clear expectations and minimized context switching are essential for maintaining productivity.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What strategies can companies implement to enhance productivity and satisfaction among remote workers?",
+      "source_title": "7 Proven Strategies to Keep Remote Employees Engaged in 2026",
+      "source_url": "https://sparkbay.com/en/culture-blog/improve-remote-employee-engagement-14",
+      "key_point": "Establish clear goals and objectives for remote employees.",
+      "evidence": "Receiving clear goals and objectives improves remote employee engagement.",
+      "relevance_reason": "Engagement and alignment with business goals are critical for remote worker satisfaction.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What strategies can companies implement to enhance productivity and satisfaction among remote workers?",
+      "source_title": "8 Essential Remote Work Productivity Tips for 2026",
+      "source_url": "https://nearshorebusinesssolutions.com/news/remote-work-productivity-tips/",
+      "key_point": "Create a dedicated workspace to enhance focus.",
+      "evidence": "A dedicated workspace can help improve focus and create a clear work-life boundary.",
+      "relevance_reason": "Physical and psychological separation of work spaces is vital for productivity.",
+      "confidence_score": null
     }
   ]
 }

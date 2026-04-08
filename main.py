@@ -3,10 +3,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import typer
 
-from extractor import run_extractor, save_evidence_notes
-from planner import generate_research_plan
-from searcher import run_searcher, save_search_results
-from writer import generate_report, save_report
+from reviewer import summarize_review_decision
+from workflow import run_research_workflow
 
 app = typer.Typer(add_completion=False)
 
@@ -22,15 +20,33 @@ def main(
     report_output: str | None = typer.Option(
         None, help="Optional output path for the markdown report."
     ),
+    max_retries: int = typer.Option(
+        1, min=0, max=1, help="Maximum number of reviewer-triggered retry passes."
+    ),
 ) -> None:
     # Load environment variables for OpenAI credentials.
     load_dotenv(dotenv_path=Path(__file__).with_name(".env"))
 
     try:
-        plan = generate_research_plan(query)
+        state = run_research_workflow(
+            user_query=query,
+            max_results=max_results,
+            max_notes=max_notes,
+            report_title=report_title,
+            report_output=report_output,
+            max_retries=max_retries,
+        )
     except RuntimeError as exc:
-        typer.secho(f"Planner error: {exc}", fg=typer.colors.RED, err=True)
+        typer.secho(f"Workflow error: {exc}", fg=typer.colors.RED, err=True)
         raise typer.Exit(code=1)
+    except Exception as exc:
+        typer.secho(f"Unexpected workflow failure: {exc}", fg=typer.colors.RED, err=True)
+        raise typer.Exit(code=1)
+
+    plan = state["plan"]
+    grouped_results = state["search_results"]
+    grouped_notes = state["extracted_notes"]
+    review = state["review_decision"]
 
     print("Research Goal:")
     print(plan.research_goal)
@@ -43,40 +59,29 @@ def main(
     for section in plan.report_outline:
         print(f"- {section}")
 
-    grouped_results = run_searcher(plan=plan, max_results=max_results)
-    output_path = save_search_results(grouped_results)
     print()
     print("Search Results Summary:")
     for subquestion, results in grouped_results.items():
         print(f"- {subquestion} ({len(results)} results)")
     print()
-    print(f"Saved raw search results to: {output_path}")
+    print(f"Saved raw search results to: {state.get('search_results_path')}")
 
-    grouped_notes = run_extractor(
-        grouped_results=grouped_results,
-        max_notes_per_subquestion=max_notes,
-    )
-    notes_output_path = save_evidence_notes(grouped_notes)
     print()
     print("Evidence Notes Summary:")
     for subquestion, notes in grouped_notes.items():
         print(f"- {subquestion} ({len(notes)} notes)")
     print()
-    print(f"Saved extracted evidence notes to: {notes_output_path}")
+    print(f"Saved extracted evidence notes to: {state.get('notes_output_path')}")
 
-    try:
-        markdown_report = generate_report(
-            plan=plan,
-            extracted_notes=grouped_notes,
-            report_title=report_title,
-        )
-    except RuntimeError as exc:
-        typer.secho(f"Writer error: {exc}", fg=typer.colors.RED, err=True)
-        raise typer.Exit(code=1)
-
-    report_path = save_report(markdown_report=markdown_report, output_path=report_output)
     print()
-    print(f"Saved final markdown report to: {report_path}")
+    print("Review Decision:")
+    print(summarize_review_decision(review))
+    print(f"Retry triggered: {state.get('retry_triggered', False)}")
+    print(f"Retry count: {state.get('retry_count', 0)} / {max_retries}")
+    print()
+    print(f"Saved review decision to: {state.get('review_output_path')}")
+    print(f"Saved latest report artifact to: {state.get('report_output_path')}")
+    print(f"Saved final markdown report to: {state.get('final_report_path')}")
 
 
 if __name__ == "__main__":

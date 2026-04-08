@@ -35,3 +35,15 @@ class EvidenceNoteList(BaseModel):
     """Container for structured-output extraction responses."""
 
     notes: List[EvidenceNote]
+
+
+class ReviewDecision(BaseModel):
+    """Structured decision produced by the reviewer stage."""
+
+    approved: bool
+    overall_assessment: str
+    support_gaps: List[str]
+    revision_instructions: List[str]
+    needs_more_research: bool
+    weak_sections: List[str] = []
+    confidence: str | None = None
