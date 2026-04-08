@@ -1,6 +1,6 @@
 from typing import List
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class ResearchPlan(BaseModel):
@@ -9,3 +9,29 @@ class ResearchPlan(BaseModel):
     research_goal: str
     subquestions: List[str]
     report_outline: List[str]
+
+
+class SearchResult(BaseModel):
+    """Single normalized web search result."""
+
+    title: str
+    url: str
+    snippet: str
+
+
+class EvidenceNote(BaseModel):
+    """One extracted evidence note tied to a specific source."""
+
+    subquestion: str
+    source_title: str
+    source_url: str
+    key_point: str
+    evidence: str
+    relevance_reason: str
+    confidence_score: float | None = Field(default=None, ge=0.0, le=1.0)
+
+
+class EvidenceNoteList(BaseModel):
+    """Container for structured-output extraction responses."""
+
+    notes: List[EvidenceNote]

@@ -1,0 +1,13 @@
+{
+  "sample question": [
+    {
+      "subquestion": "sample question",
+      "source_title": "Example",
+      "source_url": "https://example.com",
+      "key_point": "Key point",
+      "evidence": "Evidence text",
+      "relevance_reason": "Directly answers the sample question.",
+      "confidence_score": 0.8
+    }
+  ]
+}
