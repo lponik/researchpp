@@ -1,92 +1,54 @@
 {
-  "What are the cost implications of implementing RAG versus long-context prompting in enterprise Q&A systems?": [
+  "What are the key objectives outlined by OpenAI for the next five years?": [
     {
-      "subquestion": "What are the cost implications of implementing RAG versus long-context prompting in enterprise Q&A systems?",
-      "source_title": "A Comparative Study of RAG and Long-Context LLMs",
-      "source_url": "https://ai.plainenglish.io/balancing-cost-and-performance-a-comparative-study-of-rag-and-long-context-llms-f674f2a1bbf4",
-      "key_point": "Trade-offs between performance and computational costs are highlighted.",
-      "evidence": "The study presents a detailed comparison of computational costs associated with RAG and long-context prompting, emphasizing their trade-off with performance.",
-      "relevance_reason": "Offers insights into cost implications based on performance metrics, which are vital for enterprise decision-making.",
-      "confidence_score": 0.9
-    }
-  ],
-  "How does the latency differ between RAG and long-context prompting methods in providing answers?": [
-    {
-      "subquestion": "How does the latency differ between RAG and long-context prompting methods in providing answers?",
-      "source_title": "RAG vs Large Context Window: Real Trade-offs for AI Apps - Redis",
-      "source_url": "https://redis.io/blog/rag-vs-large-context-window-ai-apps/",
-      "key_point": "RAG is more cost-effective for retrieval-style queries.",
-      "evidence": "RAG avoids paying for tokens the model doesn't need, while long context models tend to demonstrate superior performance for full-document understanding.",
-      "relevance_reason": "This contrasts the operational efficiency of RAG versus long-context models, which can infer latency in processing unrelated tokens.",
-      "confidence_score": 0.85
-    },
-    {
-      "subquestion": "How does the latency differ between RAG and long-context prompting methods in providing answers?",
-      "source_title": "RAG vs. long-context LLMs: A side-by-side comparison - Meilisearch",
-      "source_url": "https://www.meilisearch.com/blog/rag-vs-long-context-llms",
-      "key_point": "RAG ensures lean prompts compared to long-context models.",
-      "evidence": "RAG ensures the prompts are lean and cost-effective, while the long-context LLMs handle the analysis and reasoning the user requires.",
-      "relevance_reason": "This extraction highlights the efficiency of RAG in prompt formulation, which can relate to reduced latency.",
-      "confidence_score": 0.7
-    }
-  ],
-  "What measures of answer quality can be used to compare RAG and long-context prompting, and how do they perform on these measures?": [
-    {
-      "subquestion": "What measures of answer quality can be used to compare RAG and long-context prompting, and how do they perform on these measures?",
-      "source_title": "Long Context RAG Performance of LLMs | Databricks Blog",
-      "source_url": "https://www.databricks.com/blog/long-context-rag-performance-llms",
-      "key_point": "Long context enhances relevance retrieval for RAG",
-      "evidence": "The benefit of using long context for RAG is that the system can augment the retrieval step to include more documents, increasing the likelihood of relevant document availability.",
-      "relevance_reason": "Demonstrates a clear quality improvement in information retrieval when using long-context in RAG systems.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "What measures of answer quality can be used to compare RAG and long-context prompting, and how do they perform on these measures?",
-      "source_title": "[PDF] RAG vs. Long Context: Examining Frontier Large Language Models ...",
-      "source_url": "https://www.pnnl.gov/sites/default/files/media/file/PNNL_PolicyAI_RAG_Lessons_v3_06_20.pdf",
-      "key_point": "Long context models process massive token amounts",
-      "evidence": "The study assesses long context models that can process 128K to 1.5M tokens in answering questions.",
-      "relevance_reason": "Quantifies the context-handling capacity of long-context models, relevant for comparing with RAG.",
+      "subquestion": "What are the key objectives outlined by OpenAI for the next five years?",
+      "source_title": "[OpenAI_OSTP RFI Oct 27 2025]",
+      "source_url": "https://cdn.openai.com/pdf/21b88bb5-10a3-4566-919d-f9a6b9c3e632/openai-ostp-rfi-oct-27-2025.pdf",
+      "key_point": "Targeting 100 GW of new energy per year linked to AI development.",
+      "evidence": "Specifically, to achieve 100 GW in new energy per year and the benefits that come with it...",
+      "relevance_reason": "This indicates a specific quantitative target related to energy and AI, aligning with sustainability in AI technology.",
       "confidence_score": null
     }
   ],
-  "Are there specific use-case scenarios where one method significantly outperforms the other in terms of cost, latency, or answer quality?": [
+  "How does OpenAI plan to address ethical concerns associated with AI development in the future?": [],
+  "What upcoming technologies or projects has OpenAI announced or hinted at?": [
     {
-      "subquestion": "Are there specific use-case scenarios where one method significantly outperforms the other in terms of cost, latency, or answer quality?",
-      "source_title": "Edge Computing Use Cases That Deliver Faster Results And High ROI",
-      "source_url": "https://www.forbes.com/councils/forbestechcouncil/2026/02/25/edge-computing-use-cases-that-deliver-faster-results-and-high-roi/",
-      "key_point": "Edge computing reduces latency and response time.",
-      "evidence": "By analyzing data at the edge, teams reduce latency, bandwidth use and response time.",
-      "relevance_reason": "Specific use-case scenario demonstrating better performance through reduced response time.",
+      "subquestion": "What upcoming technologies or projects has OpenAI announced or hinted at?",
+      "source_title": "OpenAI, Oracle, SoftBank plan five new AI data centers for $500 ...",
+      "source_url": "https://finance.yahoo.com/news/openai-oracle-softbank-plan-five-210405241.html",
+      "key_point": "OpenAI's involvement in a multi-billion dollar project.",
+      "evidence": "OpenAI, Oracle, SoftBank plan five new AI data centers for the $500 billion Stargate project.",
+      "relevance_reason": "Highlights a significant investment and infrastructure initiative by OpenAI in AI technologies.",
       "confidence_score": null
     },
     {
-      "subquestion": "Are there specific use-case scenarios where one method significantly outperforms the other in terms of cost, latency, or answer quality?",
-      "source_title": "How to Choose the Right AI Model for Your Use Case - elvex",
-      "source_url": "https://www.elvex.com/blog/how-to-choose-the-right-ai-model-for-your-use-case",
-      "key_point": "Claude Opus 4.5 excels in coding tasks due to strong performance.",
-      "evidence": "Claude Opus 4.5 is recognized as the world's best coding model with sustained performance on complex, long-running tasks and agent workflows.",
-      "relevance_reason": "Concrete claim supporting the superiority of one AI model for specific complex tasks.",
+      "subquestion": "What upcoming technologies or projects has OpenAI announced or hinted at?",
+      "source_title": "OpenAI says its AI wearable is on track as AI earbuds rumors spread",
+      "source_url": "https://mashable.com/article/openai-ai-wearable-2026-release-earbuds-rumors",
+      "key_point": "Announcement of an AI hardware product.",
+      "evidence": "OpenAI says it is on track to release its first AI hardware product in 2026, rumored to be AI-powered wireless earbuds.",
+      "relevance_reason": "Specific timeline and product type (AI-powered earbuds) indicate a clear development direction for OpenAI.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What upcoming technologies or projects has OpenAI announced or hinted at?",
+      "source_title": "Exclusive: OpenAI aims to debut first device in 2026, exec tells Axios",
+      "source_url": "https://www.axios.com/2026/01/19/openai-device-2026-lehane-jony-ive",
+      "key_point": "Unveiling of first OpenAI device planned.",
+      "evidence": "OpenAI is 'on track' to unveil its first device in the second half of 2026, according to chief global affairs officer Chris Lehane.",
+      "relevance_reason": "Provides a specific timeline for the release of a new OpenAI device, indicating progress in product development.",
       "confidence_score": null
     }
   ],
-  "What are the potential limitations or challenges associated with each approach in enterprise environments?": [
+  "How does OpenAI's future vision align with current trends in artificial intelligence?": [],
+  "What are the expected impacts of OpenAI's future plans on the broader AI industry?": [
     {
-      "subquestion": "What are the potential limitations or challenges associated with each approach in enterprise environments?",
-      "source_title": "Top 5 Enterprise Digital Transformation Challenges in 2026",
-      "source_url": "https://techtronixcorp.com/blogs-and-articles/top-5-enterprise-digital-transformation-challenges-2026/",
-      "key_point": "Poor change management is a critical barrier to digital transformation success.",
-      "evidence": "70% of failed transformations are attributed to poor change management, while 75% of executives struggle to measure ROI effectively, indicating substantial risks in transformation strategies.",
-      "relevance_reason": "This evidence highlights significant organizational challenges with digital transformation that could hinder effective implementation in enterprise settings.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "What are the potential limitations or challenges associated with each approach in enterprise environments?",
-      "source_title": "7 challenges IT leaders will face in 2026 - CIO",
-      "source_url": "https://www.cio.com/article/4114004/7-challenges-it-leaders-will-face-in-2026.html",
-      "key_point": "Scaling AI enterprise-wide poses significant risks.",
-      "evidence": "CIOs highlight a pivotal challenge for 2026 will be scaling AI enterprise-wide without losing control, balancing competing expectations of delivering AI-driven value and managing costs.",
-      "relevance_reason": "Directly addresses a significant limitation related to AI implementation, indicating difficulties in scaling and control that enterprises must navigate.",
+      "subquestion": "What are the expected impacts of OpenAI's future plans on the broader AI industry?",
+      "source_title": "The Uncertain Future of OpenAI: Market Struggles and Evolving AI ...",
+      "source_url": "https://www.linkedin.com/pulse/uncertain-future-openai-market-struggles-evolving-ai-david-linthicum-epg4e",
+      "key_point": "Projected financial losses",
+      "evidence": "OpenAI's mounting financial losses are projected to reach an astonishing $14.4 billion.",
+      "relevance_reason": "Highlights the significant financial challenges OpenAI faces which could impact its strategic direction and influence in the AI market.",
       "confidence_score": null
     }
   ]

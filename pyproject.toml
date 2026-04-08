@@ -9,7 +9,9 @@ dependencies = [
     "langchain-openai>=1.1.12",
     "langchain-tavily>=0.2.0",
     "langgraph>=1.1.6",
+    "pyfiglet>=1.0.2",
     "python-dotenv>=1.2.2",
+    "rich>=14.2.0",
     "tavily-python>=0.7.0",
     "typer>=0.24.1",
 ]
