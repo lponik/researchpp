@@ -161,7 +161,7 @@ Extracted evidence notes grouped by subquestion (JSON):
 def save_report(markdown_report: str, output_path: str | Path | None = None) -> Path:
     """Save the final markdown report to disk."""
     if output_path is None:
-        output_path = Path(__file__).resolve().parent / "outputs" / "report.md"
+        output_path = Path(__file__).resolve().parent / "outputs" / "revised_report.md"
 
     path = Path(output_path)
     path.parent.mkdir(parents=True, exist_ok=True)

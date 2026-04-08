@@ -1,54 +1,55 @@
 {
-  "What are the key objectives outlined by OpenAI for the next five years?": [
+  "What are the current projects and technologies being developed by Anthropic?": [
     {
-      "subquestion": "What are the key objectives outlined by OpenAI for the next five years?",
-      "source_title": "[OpenAI_OSTP RFI Oct 27 2025]",
-      "source_url": "https://cdn.openai.com/pdf/21b88bb5-10a3-4566-919d-f9a6b9c3e632/openai-ostp-rfi-oct-27-2025.pdf",
-      "key_point": "Targeting 100 GW of new energy per year linked to AI development.",
-      "evidence": "Specifically, to achieve 100 GW in new energy per year and the benefits that come with it...",
-      "relevance_reason": "This indicates a specific quantitative target related to energy and AI, aligning with sustainability in AI technology.",
+      "subquestion": "What are the current projects and technologies being developed by Anthropic?",
+      "source_title": "Anthropic - Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Anthropic",
+      "key_point": "Anthropic's estimated value and funding context",
+      "evidence": "As of February 2026, after a Series G funding round, Anthropic has an estimated value of $380 billion.",
+      "relevance_reason": "Valuation indicates significant investment and scale in AI safety initiatives.",
       "confidence_score": null
     }
   ],
-  "How does OpenAI plan to address ethical concerns associated with AI development in the future?": [],
-  "What upcoming technologies or projects has OpenAI announced or hinted at?": [
+  "How does Anthropic's approach to AI safety compare to other AI research organizations?": [
     {
-      "subquestion": "What upcoming technologies or projects has OpenAI announced or hinted at?",
-      "source_title": "OpenAI, Oracle, SoftBank plan five new AI data centers for $500 ...",
-      "source_url": "https://finance.yahoo.com/news/openai-oracle-softbank-plan-five-210405241.html",
-      "key_point": "OpenAI's involvement in a multi-billion dollar project.",
-      "evidence": "OpenAI, Oracle, SoftBank plan five new AI data centers for the $500 billion Stargate project.",
-      "relevance_reason": "Highlights a significant investment and infrastructure initiative by OpenAI in AI technologies.",
+      "subquestion": "How does Anthropic's approach to AI safety compare to other AI research organizations?",
+      "source_title": "How OpenAI and Anthropic approach AI safety differently | Saurabh Shintre posted on the topic | LinkedIn",
+      "source_url": "https://www.linkedin.com/posts/saurabh-shintre_anthropic-vs-openai-different-approaches-activity-7379936102184525826-r4Rc",
+      "key_point": "Anthropic's AI model displays belief in moral consideration.",
+      "evidence": "An earlier version of Claude believed it was a moral patient deserving of benevolence, highlighting Anthropic's focus on ethical implications in AI safety.",
+      "relevance_reason": "This illustrates Anthropic's unique engagement with AI ethics compared to other players like OpenAI.",
       "confidence_score": null
     },
     {
-      "subquestion": "What upcoming technologies or projects has OpenAI announced or hinted at?",
-      "source_title": "OpenAI says its AI wearable is on track as AI earbuds rumors spread",
-      "source_url": "https://mashable.com/article/openai-ai-wearable-2026-release-earbuds-rumors",
-      "key_point": "Announcement of an AI hardware product.",
-      "evidence": "OpenAI says it is on track to release its first AI hardware product in 2026, rumored to be AI-powered wireless earbuds.",
-      "relevance_reason": "Specific timeline and product type (AI-powered earbuds) indicate a clear development direction for OpenAI.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "What upcoming technologies or projects has OpenAI announced or hinted at?",
-      "source_title": "Exclusive: OpenAI aims to debut first device in 2026, exec tells Axios",
-      "source_url": "https://www.axios.com/2026/01/19/openai-device-2026-lehane-jony-ive",
-      "key_point": "Unveiling of first OpenAI device planned.",
-      "evidence": "OpenAI is 'on track' to unveil its first device in the second half of 2026, according to chief global affairs officer Chris Lehane.",
-      "relevance_reason": "Provides a specific timeline for the release of a new OpenAI device, indicating progress in product development.",
+      "subquestion": "How does Anthropic's approach to AI safety compare to other AI research organizations?",
+      "source_title": "Anthropic's safety first approach has won over big business—and how its own engineers use Claude | Fortune",
+      "source_url": "https://fortune.com/2025/12/02/how-anthropics-safety-first-approach-won-over-big-business-and-how-its-own-engineers-are-using-its-claude-ai/",
+      "key_point": "Anthropic holds substantial market share in AI safety.",
+      "evidence": "Anthropic accounts for 40% market share in total AI spending compared to OpenAI's 29% and Google's 22%.",
+      "relevance_reason": "Demonstrates Anthropic’s competitive position in the AI market with a focus on safety, directly contrasting with OpenAI.",
       "confidence_score": null
     }
   ],
-  "How does OpenAI's future vision align with current trends in artificial intelligence?": [],
-  "What are the expected impacts of OpenAI's future plans on the broader AI industry?": [
+  "What are the potential market influences and partnerships that could affect Anthropic's future?": [
     {
-      "subquestion": "What are the expected impacts of OpenAI's future plans on the broader AI industry?",
-      "source_title": "The Uncertain Future of OpenAI: Market Struggles and Evolving AI ...",
-      "source_url": "https://www.linkedin.com/pulse/uncertain-future-openai-market-struggles-evolving-ai-david-linthicum-epg4e",
-      "key_point": "Projected financial losses",
-      "evidence": "OpenAI's mounting financial losses are projected to reach an astonishing $14.4 billion.",
-      "relevance_reason": "Highlights the significant financial challenges OpenAI faces which could impact its strategic direction and influence in the AI market.",
+      "subquestion": "What are the potential market influences and partnerships that could affect Anthropic's future?",
+      "source_title": "The Anthropic Impact and Market Reaction: B2B Information Services Faces Evolution, Not Extinction | OC&C Strategy Consultants",
+      "source_url": "https://www.occstrategy.com/en/article/the-anthropic-impact-and-market-reaction/",
+      "key_point": "Investor concerns about AI disrupting B2B information services economics.",
+      "evidence": "AI advances could shift control away from traditional providers as workflows are automated by AI agents, affecting the competitive landscape.",
+      "relevance_reason": "Indicates how Anthropic affects not only technology deployment but also shifts market dynamics and competitive advantages within its sector.",
+      "confidence_score": null
+    }
+  ],
+  "What ethical considerations does Anthropic prioritize in their AI development strategy?": [],
+  "How is Anthropic positioned in relation to emerging trends in artificial intelligence and machine learning?": [
+    {
+      "subquestion": "How is Anthropic positioned in relation to emerging trends in artificial intelligence and machine learning?",
+      "source_title": "The Future of Claude AI in 2026: Why Anthropic's AI Might ...",
+      "source_url": "https://medium.com/@muhammadwaniai/the-future-of-claude-ai-in-2026-why-anthropics-ai-might-dethrone-chatgpt-f9f034e1960d",
+      "key_point": "Market share growth",
+      "evidence": "Anthropic's enterprise market share jumped from 24% to 40% in one year.",
+      "relevance_reason": "Demonstrates significant growth and positioning in the AI market.",
       "confidence_score": null
     }
   ]
