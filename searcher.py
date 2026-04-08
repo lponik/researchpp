@@ -1,4 +1,5 @@
 import json
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from schemas import ResearchPlan, SearchResult
@@ -56,16 +57,35 @@ def run_searcher(
     plan: ResearchPlan, max_results: int = 3
 ) -> dict[str, list[SearchResult]]:
     """Run deterministic search over every planner subquestion."""
+    subquestions = list(plan.subquestions)
+    if not subquestions:
+        return {}
+
+    print(f"Running search for {len(subquestions)} subquestions in parallel")
+
+    # Searches are independent and mostly I/O-bound, so thread fan-out is safe.
+    max_workers = min(8, len(subquestions))
     grouped_results: dict[str, list[SearchResult]] = {}
-    for subquestion in plan.subquestions:
-        try:
-            grouped_results[subquestion] = search_subquestion(
-                subquestion=subquestion, max_results=max_results
-            )
-        except RuntimeError:
-            # Keep pipeline moving even if one search call fails.
-            grouped_results[subquestion] = []
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        for subquestion, results in executor.map(
+            _search_one_subquestion,
+            subquestions,
+            [max_results] * len(subquestions),
+        ):
+            grouped_results[subquestion] = results
+
     return grouped_results
+
+
+def _search_one_subquestion(
+    subquestion: str, max_results: int
+) -> tuple[str, list[SearchResult]]:
+    try:
+        results = search_subquestion(subquestion=subquestion, max_results=max_results)
+    except Exception:
+        # Keep pipeline moving even if one search call fails.
+        results = []
+    return subquestion, results
 
 
 def save_search_results(

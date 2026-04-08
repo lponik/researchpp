@@ -1,4 +1,5 @@
 import json
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from langchain_openai import ChatOpenAI
@@ -191,19 +192,41 @@ def run_extractor(
     max_notes_per_subquestion: int = 4,
 ) -> dict[str, list[EvidenceNote]]:
     """Run evidence extraction over every subquestion's search results."""
+    items = list(grouped_results.items())
+    if not items:
+        return {}
+
+    print(f"Running extraction for {len(items)} subquestions in parallel")
+
+    # Extractions are independent and mostly network-bound model calls.
+    max_workers = min(8, len(items))
     grouped_notes: dict[str, list[EvidenceNote]] = {}
-    for subquestion, results in grouped_results.items():
-        try:
-            grouped_notes[subquestion] = extract_evidence_for_subquestion(
-                subquestion=subquestion,
-                search_results=results,
-                max_notes=max_notes_per_subquestion,
-            )
-        except RuntimeError:
-            # Keep pipeline moving if one extraction step fails.
-            grouped_notes[subquestion] = []
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        for subquestion, notes in executor.map(
+            _extract_one_subquestion,
+            items,
+            [max_notes_per_subquestion] * len(items),
+        ):
+            grouped_notes[subquestion] = notes
 
     return grouped_notes
+
+
+def _extract_one_subquestion(
+    item: tuple[str, list[SearchResult]],
+    max_notes: int,
+) -> tuple[str, list[EvidenceNote]]:
+    subquestion, results = item
+    try:
+        notes = extract_evidence_for_subquestion(
+            subquestion=subquestion,
+            search_results=results,
+            max_notes=max_notes,
+        )
+    except Exception:
+        # Keep pipeline moving if one extraction step fails.
+        notes = []
+    return subquestion, notes
 
 
 def save_evidence_notes(
