@@ -1,3 +1,12 @@
+<pre style="background:#000;color:#fff;padding:12px;border-radius:6px;">
+                                   _                 
+ _ __ ___  ___  ___  __ _ _ __ ___| |__    _     _   
+| '__/ _ \/ __|/ _ \/ _` | '__/ __| '_ \ _| |_ _| |_ 
+| | |  __/\__ \  __/ (_| | | | (__| | | |_   _|_   _|
+|_|  \___||___/\___|\__,_|_|  \___|_| |_| |_|   |_|  
+                                                     
+</pre>
+
 # researchpp
 
 `researchpp` is a staged, retrieval-grounded research pipeline that generates markdown reports from a user query.
@@ -98,6 +107,8 @@ From `pyproject.toml`:
 - `langgraph`
 - `langchain` / `langchain-openai`
 - `langchain-tavily` / `tavily-python`
+- `rich`
+- `pyfiglet`
 - `typer`
 - `python-dotenv`
 
