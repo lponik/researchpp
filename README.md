@@ -197,12 +197,9 @@ Artifacts are written to `outputs/`:
 
 - `search_results.json`: grouped normalized search results.
 - `notes.json`: grouped extracted evidence notes.
-- `report.md`: first-pass report (default naming).
-- `revised_report.md`: retry-pass report (default naming).
+- `revised_report.md`: latest report artifact (default naming for all runs).
 - `review.json`: latest reviewer decision and retry count.
-- `final_report.md`: stable final artifact pointer written at end of workflow.
-
-Even when naming differs via `--report-output`, `final_report.md` is still written for a stable final location.
+- optional custom markdown path via `--report-output`.
 
 ## Failure Behavior and Retry Semantics
 

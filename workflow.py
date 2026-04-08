@@ -30,7 +30,6 @@ class ResearchWorkflowState(TypedDict, total=False):
     notes_output_path: str
     report_output_path: str
     review_output_path: str
-    final_report_path: str
     retry_triggered: bool
     failed_subquestions: list[str]
 
@@ -146,8 +145,7 @@ def _writer_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
     report_output = state.get("report_output")
     if report_output is None:
         base = Path(__file__).resolve().parent / "outputs"
-        filename = "report.md" if state.get("retry_count", 0) == 0 else "revised_report.md"
-        report_output = str(base / filename)
+        report_output = str(base / "revised_report.md")
 
     report_path = save_report(markdown_report=report, output_path=report_output)
     return {
@@ -282,11 +280,5 @@ def run_research_workflow(
             },
         },
     )
-
-    # Keep a stable final artifact path for demos, regardless of retry behavior.
-    final_report_path = Path(__file__).resolve().parent / "outputs" / "final_report.md"
-    final_report_path.parent.mkdir(parents=True, exist_ok=True)
-    final_report_path.write_text(final_state["report_markdown"], encoding="utf-8")
-    final_state["final_report_path"] = str(final_report_path)
 
     return final_state

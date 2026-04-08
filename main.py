@@ -117,7 +117,6 @@ def _print_plain_summary(state: dict[str, Any], max_retries: int) -> None:
     print()
     print(f"Saved review decision to: {state.get('review_output_path')}")
     print(f"Saved latest report artifact to: {state.get('report_output_path')}")
-    print(f"Saved final markdown report to: {state.get('final_report_path')}")
 
 
 def _print_styled_summary(state: dict[str, Any], max_retries: int) -> None:
@@ -175,7 +174,6 @@ def _print_styled_summary(state: dict[str, Any], max_retries: int) -> None:
         f"evidence notes: {state.get('notes_output_path')}",
         f"review decision: {state.get('review_output_path')}",
         f"latest report artifact: {state.get('report_output_path')}",
-        f"final markdown report: {state.get('final_report_path')}",
     ]
     console.print(
         Panel(
