@@ -114,19 +114,31 @@ Context:
 - Do not retrieve new information and do not use outside knowledge.
 
 Instructions:
-1. Use the research goal and evidence notes to produce a clear, professional report.
-2. Organize key findings around the provided report outline where useful.
-3. Synthesize findings; do not copy notes verbatim and do not repeat the same point.
-4. Avoid unsupported speculation. If evidence is thin, explicitly say so.
-5. Output markdown only.
-6. Include these sections:
+1. Use the research goal and evidence notes to produce a clear, professional report with specific claims.
+2. Use strong, specific claims only when directly supported by evidence notes.
+3. Do not use vague modal phrasing such as "may", "can", or "tends to".
+4. For comparative topics, explicitly compare approaches in each key section.
+5. In Key Findings, present side-by-side subsections for Cost, Latency, and Answer Quality using this format:
+   - RAG: ...
+   - Long-context: ...
+   - Tradeoff: ...
+6. Ground claims with concrete details from evidence notes (numbers, comparisons, mechanisms) instead of generic statements.
+7. If evidence is weak or missing for a point, explicitly state: "Insufficient evidence in snippets to conclude."
+8. If strong quantitative or comparative evidence is missing:
+   - explicitly state the limitation
+   - do NOT generalize
+   - do NOT infer
+   - Example: "Available sources do not provide direct cost benchmarks, limiting quantitative comparison between RAG and long-context approaches."
+9. Synthesize findings; do not copy notes verbatim and do not repeat the same point.
+10. Output markdown only.
+11. Include these sections:
    - # {title}
    - ## Research Goal
    - ## Executive Summary
    - ## Key Findings
    - ## Analysis / Technical Takeaways
    - ## Open Questions / Limitations
-7. Do not include a Sources section; it will be appended separately.
+12. Do not include a Sources section; it will be appended separately.
 
 Research plan (JSON):
 {json.dumps(plan.model_dump(), indent=2, ensure_ascii=False)}

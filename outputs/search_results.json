@@ -1,87 +1,137 @@
 {
-  "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?": [
+  "What are the cost implications of implementing RAG versus long-context prompting in enterprise Q&A systems?": [
     {
-      "title": "RAG vs Long-Context: Systems Engineering for Real-Time Knowledge",
+      "title": "RAG vs Long-Context: Systems Engineering for Real-Time ...",
       "url": "https://www.linkedin.com/posts/marcelo-aquinojr_ai-rag-trending-activity-7434219057383579648-LMlW",
       "snippet": "In 2026, \"more context\" is not a strategy. It's often just an expensive way to hide the fact that you don't control freshness."
     },
     {
-      "title": "Balancing Cost and Performance: A Comparative Study of RAG and ...",
-      "url": "https://ai.plainenglish.io/balancing-cost-and-performance-a-comparative-study-of-rag-and-long-context-llms-f674f2a1bbf4",
-      "snippet": "The results show that long context gets better results for each model (i.e., providing all context in the prompt) than RAG. Press enter or click"
-    },
-    {
-      "title": "What Is Flat-Rate Long-Context Pricing? How Anthropic Changed ...",
+      "title": "What Is Flat-Rate Long-Context Pricing? How Anthropic ...",
       "url": "https://www.mindstudio.ai/blog/flat-rate-long-context-pricing-anthropic-claude/",
       "snippet": "But even as context grew, the cost-per-token for large prompts made long-context approaches uncomfortable for most production workloads — and the per-token rates were significantly higher than they are now. For internal tools, document analysis workflows, or knowledge bases that a small number of users query a few hundred times per day, the total cost of owning a RAG pipeline often exceeds the token cost of a long-context approach. Flat-rate long-context pricing means the cost per token doesn’t increase based on where that token appears in the context window or how long the total prompt is. No. RAG remains the right choice when document corpora exceed context window limits, when query volume is high enough that per-query token costs matter, or when precise metadata filtering is required. * **Flat-rate pricing removes the depth penalty**: Anthropic charges the same per-token rate at every position in Claude’s context window — no tiered pricing cliff, no premium for long prompts."
+    },
+    {
+      "title": "A Comparative Study of RAG and Long-Context LLMs",
+      "url": "https://ai.plainenglish.io/balancing-cost-and-performance-a-comparative-study-of-rag-and-long-context-llms-f674f2a1bbf4",
+      "snippet": "This paper presents a comprehensive comparison of RAG and LC, highlighting the trade-offs between performance and computational cost."
+    },
+    {
+      "title": "VentureBeat",
+      "url": "https://www.facebook.com/venturebeat/posts/present-your-agentic-ai-technology-to-hundreds-of-enterprise-decision-makers-get/1318300150156529/",
+      "snippet": "# VentureBeat - Present your agentic AI technology to... [Log In](https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fventurebeat%2Fposts%2Fpresent-your-agentic-ai-technology-to-hundreds-of-enterprise-decision-makers-get%2F1318300150156529%2F). [Forgot Account?](https://www.facebook.com/recover/initiate?ars=royal_blue_bar). ## VentureBeat's Post. [](https://www.facebook.com/venturebeat?__cft__[0]=AZY8Y7nAKIiON4qyKR9xndAIjVegp-S7BOKK6II-aKTtgekXiVX8wyel_gZURkTlH7ed6HyrsxULuEN7dx1y6u4ruM4NZSTi2aOek2qxU6JdCyERxwBaTWn0hp31nqUVJYQ6HeEFUdrK_hfrfk0fnhJf8dm9jmuiuRIVEwcU0RyVVw&__tn__=%3C%3C%2CP-R). ### [**VentureBeat**](https://www.facebook.com/venturebeat?__cft__[0]=AZY8Y7nAKIiON4qyKR9xndAIjVegp-S7BOKK6II-aKTtgekXiVX8wyel_gZURkTlH7ed6HyrsxULuEN7dx1y6u4ruM4NZSTi2aOek2qxU6JdCyERxwBaTWn0hp31nqUVJYQ6HeEFUdrK_hfrfk0fnhJf8dm9jmuiuRIVEwcU0RyVVw&__tn__=-UC%2CP-R). [6d](https://www.facebook.com/venturebeat/posts/pfbid02g83FWQF9autNS7r4antjqCie6UehDFgwPsTwpKu7aeGyrkp9tySEx9RN3wuRK77al?__cft__[0]=AZY8Y7nAKIiON4qyKR9xndAIjVegp-S7BOKK6II-aKTtgekXiVX8wyel_gZURkTlH7ed6HyrsxULuEN7dx1y6u4ruM4NZSTi2aOek2qxU6JdCyERxwBaTWn0hp31nqUVJYQ6HeEFUdrK_hfrfk0fnhJf8dm9jmuiuRIVEwcU0RyVVw&__tn__=%2CO%2CP-R) ·. Present your agentic AI technology to hundreds of enterprise decision-makers. Get live feedback from thought leaders. That's what the Innovation Showcase at VB Transform 2026 offers — and applications are open now. [https://venturebeat.com/.../calling-all-gen-ai-disruptors...](https://l.facebook.com/l.php?u=https%3A%2F%2Fventurebeat.com%2Ftechnology%2Fcalling-all-gen-ai-disruptors-of-the-enterprise-apply-now-to-present-at-transform-2026&h=AT70i98Aig4cdp04fn3jaNXrKDi88GmOr0XBjXCBDmB_u3T73xKYfO9J3-KFpqsc4ZK407J_VnVVzDysmCEhiveRPJtD2L2bRAxL-IWsBmqqCPVwc612dlQPQmSCzdPVYJhsMvfYjFpsBW7zp5ND0HDakEP6GsqprJUVh2kl_rnTz2bZLgSKkg&__tn__=-UK-R&c[0]=AT4JctetF5p5hdURWXd7RmAKHokQn2Ap5srgL00El3CykEVRCtLfgu4s07hp1veKt33J8bDZuTOA1yjG3v8uDi_t2a8JNZ5MSY42DD0bC8byIA-pWX1xh5uny8LWdkLm3nxsL5jKayPZGkRujS5nhg9G-kpAXfpktN7dMTbsl8U0TYYxLg_SdvKq3U-wNuk). [![Image 1: May be an image of one or more people and text](https://scontent-sof1-2.xx.fbcdn.net/v/t39.30808-6/657371345_1318300126823198_856386774666093886_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=avdq7lutF0AQ7kNvwEwjCoV&_nc_oc=AdqpfMGbRqyVg_NfnuSSvQz8f3xwvYMViI06AYRPPEUVKADuse7gxiumEU8Bm62elWnXI4qPz4Ca46sRXJbpV9G_&_nc_zt=23&_nc_ht=scontent-sof1-2.xx&_nc_gid=wxACOBFg4ci6Xtk8gGjuzQ&_nc_ss=7a389&oh=00_Af1xq7zpaef_ifXMtOFap01ecvNPqBuKQQy1CskVhPDVVA&oe=69DAAAC5)](https://www.facebook.com/photo/?fbid=1318300120156532&set=a.644216264231591&__cft__[0]=AZY8Y7nAKIiON4qyKR9xndAIjVegp-S7BOKK6II-aKTtgekXiVX8wyel_gZURkTlH7ed6HyrsxULuEN7dx1y6u4ruM4NZSTi2aOek2qxU6JdCyERxwBaTWn0hp31nqUVJYQ6HeEFUdrK_hfrfk0fnhJf8dm9jmuiuRIVEwcU0RyVVw&__tn__=EH-R). ![Image 2](blob:http://localhost/85d8b181a20aeb64a3afc2f1c39d2480). ![Image 3](blob:http://localhost/85d8b181a20aeb64a3afc2f1c39d2480)."
+    },
+    {
+      "title": "https://www.microsoft.com/releasecommunications/ap...",
+      "url": "https://www.microsoft.com/releasecommunications/api/v2/m365?responseFormat=csv",
+      "snippet": "\"558685\",\"Microsoft Purview: Information Protection - Exclude modern groups / include dynamic security groups support for sensitivity label policies \",\"To provide more flexibility, admins can now exclude modern Microsoft 365 groups and scope sensitivity label policies to dynamic and non-mail enabled security groups—expanding policy targeting beyond individual users and mail enabled groups.\",\"In development\",\"\",\"Microsoft Purview\",\"General Availability, Preview\",\"Web\",\"Worldwide (Standard Multi-Tenant)\",\"2026-03-16\",\"2026-03-26\",\"April CY2026\",\"May CY2026\",. This new functionality will allow users to manually label Fabric items with their sensitivity level and then apply access control protections based upon the protection policies set by administrators.\",\"In development\",\"\",\"Microsoft Purview\",\"General Availability, Preview\",\"Web\",\"Worldwide (Standard Multi-Tenant)\",\"2024-10-04\",\"2024-10-04\",\"October CY2024\",\"June CY2025\",. \"117569\",\"Microsoft Purview compliance portal: eDiscovery (Premium) - CMK (Customer Managed Keys) encryption support for data at-rest in Review sets\",\"This release of eDiscovery features the implementation of customer-managed key (CMK) options, allowing users to manage their own encryption keys for the data stored in eDiscovery review sets in addition to the default, strong Microsoft-managed encryption already in place.\",\"In development\",\"\",\"Microsoft Purview\",\"General Availability, Preview\",\"Web\",\"Worldwide (Standard Multi-Tenant)\",\"2023-03-15\",\"2025-12-09\",\"June CY2026\",\"August CY2026\",."
     }
   ],
-  "How does latency differ between RAG and long-context prompting in real-world applications?": [
+  "How do latency times compare between RAG and long-context prompting in delivering answers in enterprise settings?": [
     {
-      "title": "Long Context vs RAG for Real Apps - Compute with Hivenet",
-      "url": "https://compute.hivenet.com/post/long-context-vs-rag",
-      "snippet": "# Long context vs RAG for real apps: costs, latency, and accuracy. We examine both long context language models (also referred to as long context models) and retrieval-augmented generation (RAG) workflows, which involve a two-step process of retrieving relevant information and generating responses. Long-context LLMs can handle context windows up to a million tokens, significantly larger than traditional models, enabling them to process extensive information in a single inference. There are two honest ways to give models more knowledge at inference time: make the context window bigger with long context models, or fetch the right text on demand using RAG workflows. RAG (Retrieval-Augmented Generation) retrieves relevant external documents to augment the model’s input dynamically, while long-context LLMs rely on a very large fixed context window to process all information directly. It refers to the maximum number of tokens the model can process in a single input prompt, including both user input and any additional context."
+      "title": "Scalable RAG Architectures: How Context Length, Model Choice, and Business Needs Drive Latency | by John Elliott | Medium",
+      "url": "https://john-elliott.medium.com/scalable-rag-architectures-how-context-length-model-choice-and-business-needs-drive-latency-fd17d7154507",
+      "snippet": "April 8, 2025 - The key factor driving latency in these different RAG approaches is the LLM input token processing time , as we can see in the bar chart below. This is especially relevant in long-context retrieval scenarios, where the time taken to ingest tokens"
     },
     {
-      "title": "RAG vs Large Context Window: Real Trade-offs for AI Apps - Redis",
-      "url": "https://redis.io/blog/rag-vs-large-context-window-ai-apps/",
-      "snippet": "Long context approaches process every token through the model, while RAG selectively retrieves only relevant sections. For AI apps requiring interactive response times under 2 seconds, well-optimized RAG pipelines can often hit that target, while naive long-context prompting on very large inputs may struggle to do so. For retrieval-style queries where most context goes unused, RAG avoids paying for tokens the model doesn't need. Long context models tend to demonstrate superior performance for full-document understanding, while RAG often excels when factual accuracy, traceability, and cost constraints are primary concerns. Cost sensitivity matters most for retrieval-style queries, where RAG can operate at a fraction of long context costs. Route cost-sensitive queries through RAG while reserving long-context processing for tasks requiring full corpus analysis. Consider starting with RAG for cost-effective, fast retrieval over large knowledge bases—for retrieval-style queries, it can operate at a fraction of large context window costs."
+      "title": "How do RAG and Long Context compare in 2024? - Vellum AI",
+      "url": "https://www.vellum.ai/blog/rag-vs-long-context",
+      "snippet": "We believe that RAG is absolutely here to stay, but the architecture will evolve to accommodate long-context use-cases when needed. One big benefit from long-context is that developers won’t pull their hair out over what combination of chunking strategy, embedding model, and retrieval method they’ll need to use. When developers use RAG, it’s pretty easy to serve the model with up-to-date information from wherever they store company data. So to achieve best performance, developers should strategically place the most relevant documents at the start and end of the prompt, a task that can be very manual/complex if done with the long context approach. Beyond RAG and Long Context. RAG is here to stay and it will adapt to many new use-cases, and we might see a future where developers will be using a mix of long-context + RAG in their implementations. Our goal at Vellum is to enable developers to easily start, build and deploy production-ready AI apps, and our mission goes beyond just RAG or long context."
     },
     {
-      "title": "RAG vs Long-Context LLMs: Approaches for Real-World Applications",
-      "url": "https://www.premai.io/blog/rag-vs-long-context-llms-approaches-for-real-world-applications",
-      "snippet": "This article compares Retrieval-Augmented Generation (RAG) with Long-Context Large Language Models (LLMs) in managing extensive data and complex queries, highlighting key technical differences and applications. Among these approaches, **Retrieval-Augmented Generation (RAG)** and **Long-Context (LC) LLMs** have emerged as two leading solutions. To better understand the comparative performance of Retrieval-Augmented Generation (RAG) and Long-Context (LC) LLMs across various tasks, we present the following visualizations. This comparison highlights how **Long-Context (LC) LLMs**, **Retrieval-Augmented Generation (RAG)**, and the **hybrid approach (SELF-ROUTE)** perform in different real-world scenarios. Long Context RAG Performance of Large Language ModelsRetrieval Augmented Generation (RAG) has emerged as a crucial technique for enhancing the accuracy of Large Language Models (LLMs) by incorporating external information. Our findings provide a guideline for long-context applications of LLMs using RAG and LC.arXiv.orgZhuowan Li. Retrieval meets Long Context Large Language ModelsExtending the context window of large language models (LLMs) is getting popular recently, while the solution of augmenting LLMs with retrieval has existed for years."
+      "title": "RAG vs. long-context LLMs: A side-by-side comparison",
+      "url": "https://www.meilisearch.com/blog/rag-vs-long-context-llms",
+      "snippet": "How does RAG differ from long-context LLMs? When should you use RAG over long-context LLMs? How do RAG and long-context LLMs impact costs? How to choose between RAG and long-context LLMs? ## Bringing it together: choosing between RAG and long-context LLMs. Both RAG and long-context LLMs push the limits of how large language models use data, but their goals differ significantly from one another. Bringing it together: choosing between RAG and long-context LLMs. Large language models (LLMs) are becoming better at handling larger context windows. * How both RAG and long-context LLMs perform in real-world use cases, from AI agents to enterprise knowledge bases. ## How does RAG differ from long-context LLMs? ## When should you use RAG over long-context LLMs? Now, it’s time to see the limitations of both RAG and long-context LLMs. ## How do RAG and long-context LLMs impact costs? RAG ensures the prompts are lean and cost-effective, while the long-context LLMs handle the analysis and reasoning the user requires."
+    },
+    {
+      "title": "How Long-Context LLMs are Challenging Traditional RAG Pipelines | by Jagadeesan Ganesh | Medium",
+      "url": "https://medium.com/@jagadeesan.ganesh/how-long-context-llms-are-challenging-traditional-rag-pipelines-93d6eb45398a",
+      "snippet": "January 8, 2025 - ... Objective: Measure the response time of each architecture across different task categories. ... Long-context LLMs exhibit lower latency in single-pass tasks such as question-answering and summarization ."
+    },
+    {
+      "title": "RAG vs Long Context: Best Choice for AI Systems 2026",
+      "url": "https://alphacorp.ai/blog/is-rag-still-worth-it-in-the-age-of-million-token-context-windows",
+      "snippet": "When people compare **RAG vs long context**, they’re usually pitting a million-token prompt against naive top-k vector search — and yeah, in that matchup, long context looks pretty good. That last point is interesting because even long-context model training now uses retrieval to generate synthetic long-context data. ## The Winning Pattern: Retrieval for Finding, Long Context for Reasoning. **Build a RAG pipeline (advanced or agentic) if** you’re serving multiple users with different permission levels, your data changes weekly or faster, you need sub-3-second responses, your domain requires audit trails and source attribution, or your corpus exceeds what comfortably fits in a single context window. **Build a hybrid system if** you need the best of both: retrieval for selection and cost control, long context for deep reasoning over the retrieved evidence. The best rule I can offer for 2026: **use long context to reason over a bounded evidence set, and use retrieval to decide what that evidence set should be.** If you’re starting a new project today, build the retrieval layer first."
     }
   ],
-  "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?": [
+  "What metrics can be used to evaluate answer quality between RAG and long-context prompting methods?": [
     {
-      "title": "What metrics are you actually using to evaluate RAG quality? And ...",
-      "url": "https://www.reddit.com/r/Rag/comments/1ri0mnl/what_metrics_are_you_actually_using_to_evaluate/",
-      "snippet": "Percentage of literal keywords hits in the response (requires you to define a list of expected keywords per response, can potentially be made"
+      "title": "RAG Evaluation Metrics: Assessing Answer Relevancy ...",
+      "url": "https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more",
+      "snippet": "*   [Retrieval Evaluation Metrics](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#retrieval-evaluation-metrics). *   [Contextual Relevancy](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#contextual-relevancy). *   [Contextual Recall](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#contextual-recall). *   [Contextual Precision](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#contextual-precision). *   [Generation Evaluation Metrics](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#generation-evaluation-metrics). *   [Faithfulness](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#faithfulness). *   [Custom G-Eval](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#custom-g-eval). *   [End-to-end](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#end-to-end). *   [Component-Level](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#component-level). *   [In CI/CD Pipelines](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#in-cicd-pipelines). *   [Conclusion](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#conclusion). _Important Note: If your “RAG” pipeline involves “hard-coded” retrieval, where retrieval literally cannot go wrong (for example, fetching user data based on user ID and supplying that information into your prompt), there is no need for RAG evaluation per se, you can just do regular_[_LLM system evaluation_](https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation)_or even better, do_[_agent evaluation instead_](https://www.confident-ai.com/blog/llm-agent-evaluation-complete-guide)_if the process of fetching data is a tool calling one_. ## [Retrieval Evaluation Metrics](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#retrieval-evaluation-metrics). Retrieval metrics uses a variation of QAG (question-answer-generation) to compute metric scores, which is a [great technique used by LLM evaluators to combat arbitary score calculations.](https://www.confident-ai.com/blog/top-llm-evaluators-for-testing-llms-at-scale). The contextual relevancy metric uses [LLM-as-a-judge](https://www.confident-ai.com/blog/why-llm-as-a-judge-is-the-best-llm-evaluation-method) to quantify the proportion of retrieved text chunks that are relevant to the input. ## [Generation Evaluation Metrics](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#generation-evaluation-metrics). ## [Conclusion](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#conclusion). *   [Retrieval Evaluation Metrics](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#retrieval-evaluation-metrics). *   [Contextual Relevancy](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#contextual-relevancy). *   [Contextual Recall](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#contextual-recall). *   [Contextual Precision](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#contextual-precision). *   [Generation Evaluation Metrics](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#generation-evaluation-metrics). *   [Faithfulness](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#faithfulness). *   [Custom G-Eval](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#custom-g-eval). *   [End-to-end](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#end-to-end). *   [Component-Level](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#component-level). *   [In CI/CD Pipelines](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#in-cicd-pipelines). *   [Conclusion](https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more#conclusion)."
     },
     {
-      "title": "Evaluating The Quality Of RAG & Long-Context LLM Output",
-      "url": "https://cobusgreyling.substack.com/p/evaluating-the-quality-of-rag-and",
-      "snippet": "Salesforce created Haystacks in conversation and news domains and evaluated 10 LLMs and 50 RAG systems. Their results show SummHay is still a challenge."
-    },
-    {
-      "title": "How to Evaluate RAG Systems: Metrics, Methods, and What ... - Comet",
+      "title": "How to Evaluate RAG Systems: Metrics, Methods, and ... - Comet",
       "url": "https://www.comet.com/site/blog/rag-evaluation/",
       "snippet": "Because failures can originate in either the retrieval component or the generation component, the most useful RAG evaluation strategies test the retriever and generator independently before measuring end-to-end performance. This matters for RAG evaluation pipelines because it means you’re not locked into proprietary models for your judge — platforms like Opik let you swap in any LLM supported by LiteLLM, including open-source options, as your evaluation backbone. Context precision penalizes systems that rank relevant documents lower, while context recall measures whether the retriever surfaced all the relevant information the expected answer requires. ### What does answer relevance measure in RAG evaluation? from opik.evaluation import evaluate from opik.evaluation.metrics import ( Hallucination, ContextPrecision, ContextRecall, AnswerRelevance ) metrics = [ Hallucination(), ContextPrecision(), ContextRecall(), AnswerRelevance(), ] results = evaluate( dataset=your_dataset, task=your_rag_pipeline, scoring_metrics=metrics, experiment_config={ \"model\": \"gpt-4o\", \"chunk_size\": 512, \"top_k\": 5, }, ). Start with the RAG Triad: context relevance to verify your retriever, faithfulness to catch hallucinations, and answer relevance to ensure you’re actually helping users."
+    },
+    {
+      "title": "Best Practices for Evaluating RAG Systems",
+      "url": "https://www.patronus.ai/llm-testing/rag-evaluation-metrics",
+      "snippet": "| RAG evaluation | RAG evaluation involves measuring the effectiveness of two key components: context retrieval and the generated response. The context retrieval and generator errors will be explained in more detail in the RAG evaluation metrics section. The evaluation frameworks usually extract all the statements in retrieved context using an LLM and then classify each of them as relevant or irrelevant using another LLM call to calculate this metric. Typical metrics like context relevancy, context sufficiency, answer relevance, hallucination, etc., provide valuable information while evaluating RAG Systems. RAG evaluation involves measuring the effectiveness of context retrieval and response generation. Measuring against a gold standard with an LLM-as-a-judge approach is the best method for evaluating LLMs. Frameworks like DeepEval, TruLens, and Patronus AI provide functions to streamline this process. Learn how to effectively implement and evaluate retrieval-augmented generation systems using popular RAG evaluation metrics and best practices for production."
+    },
+    {
+      "title": "What metrics are you actually using to evaluate RAG ...",
+      "url": "https://www.reddit.com/r/Rag/comments/1ri0mnl/what_metrics_are_you_actually_using_to_evaluate/",
+      "snippet": "Retrieval quality: Are we pulling the right chunks? · Faithfulness: Is the LLM sticking to what's in the context? · Answer relevance: Is the final"
+    },
+    {
+      "title": "Mastering RAG Evaluation: Metrics, Testing & Best Practices",
+      "url": "https://medium.com/@adnanmasood/mastering-rag-evaluation-metrics-testing-best-practices-8c384b13e7e1",
+      "snippet": "Mastering RAG Evaluation: Metrics, Testing & Best Practices | by Adnan Masood, PhD. Mastering RAG Evaluation: Metrics, Testing & Best Practices. **Evaluating Retrieval‑Augmented Generation** — Retrieval metrics, reference‑based and reference‑free assessment. Image 2: Adnan Masood, PhD. > **Why evaluate RAG:** Retrieval‑Augmented Generation (RAG) improves factuality by grounding LLM outputs in external sources, but it also introduces new failure modes across chunking, retrieval, reranking, context assembly, and generation. Robust evaluation separates _where_ things break (retrieval vs. > **Retrieval quality:** Measure whether the system _finds the right evidence_. When you don’t, judge retrieved context via **manual review** or **LLM‑as‑a‑judge** (per‑chunk relevance or whole‑context validity). > **Generation quality:** Check whether the final answer is _correct, complete, and faithful_ to the retrieved context. Image 4: Adnan Masood, PhD. Image 5: Adnan Masood, PhD. Written by Adnan Masood, PhD. Dr. Adnan Masood is an Engineer, Thought Leader, Author, AI/ML PhD, Stanford Scholar, Harvard Alum, Microsoft Regional Director, and STEM Robotics Coach."
     }
   ],
-  "Are there specific use cases where one approach significantly outperforms the other?": [
+  "In what scenarios might one method be preferred over the other based on the identified tradeoffs?": [
     {
-      "title": "If there are two ways of approaching a task, how should one choose ...",
-      "url": "https://softwareengineering.stackexchange.com/questions/351356/if-there-are-two-ways-of-approaching-a-task-how-should-one-choose-between-them",
-      "snippet": "Pick the one approach which appears to be the least effort to start with, but make sure you keep the door open for switching to a different"
+      "title": "All three options require some trade-offs on time and cost as well as ...",
+      "url": "https://www.coursehero.com/tutors-problems/Business-Other/60077108-All-three-options-require-some-trade-offs-on-time-and-cost-as-well/",
+      "snippet": "- **If time to market is critical**, and the company can absorb higher costs, **Option 3** could be the preferred choice. The impact on quality"
     },
     {
-      "title": "Doing AI vs. Using AI: Two Approaches to Rationalize Adoption ...",
-      "url": "https://www.insight.com/en_US/content-and-resources/blog/doing-ai-vs-using-ai-two-approaches-to-rationalize-adoption-and-boost-roi.html",
-      "snippet": "Each method caters to specific requirements and resources. And both offer unique advantages and use cases. Let's take a look at the fundamental"
+      "title": "c# - What are the tradeoffs between using object ID's vs stuffing the ...",
+      "url": "https://stackoverflow.com/questions/21924187/what-are-the-tradeoffs-between-using-object-ids-vs-stuffing-the-objects-into-ot",
+      "snippet": "So perhaps my question would best be phrased, at this point, as \"in what scenarios might one prefer to go with variation 1\"? c# · entity-"
     },
     {
-      "title": "How one approach to M&A is more likely to create value than all others",
-      "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-one-approach-to-m-and-a-is-more-likely-to-create-value-than-all-others",
-      "snippet": "When compared with other types of M&A strategies, a programmatic approach is most likely to create value."
+      "title": "Trade Off Methodologies - B3 Intelligence",
+      "url": "https://www.b3intelligence.com/knowledge-center/trade-off-methodologies/",
+      "snippet": "Max-diff and conjoint analysis are both statistical techniques used in trade-off analysis. However, the methods provide different insights."
+    },
+    {
+      "title": "Time trade-off: one methodology, different methods - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3728453/",
+      "snippet": "In order to permit harmonized methods for data collection, we review central elements of the TTO with the aim to understand if, and how, results of TTO studies"
+    },
+    {
+      "title": "[PDF] Chapter 2 TRADE-OFF STRATEGIES IN ENGINEERING DESIGN",
+      "url": "https://www.researchgate.net/profile/Kevin-Otto-7/publication/2852102_Trade-Off_Strategies_In_Engineering_Design/links/0046353156b4789b58000000/Trade-Off-Strategies-In-Engineering-Design.pdf",
+      "snippet": "For example, in the design of a spacecraft solar power cell, a strategy might be to trade-off the performance gains of some goals (like available power output)"
     }
   ],
-  "What are the potential scalability issues associated with each of the methodologies?": [
+  "What are the potential impacts of tradeoffs on user satisfaction and system performance in enterprise Q&A systems?": [
     {
-      "title": "What are the most common system scalability issues you encounter?",
-      "url": "https://www.linkedin.com/advice/0/what-most-common-system-scalability-issues-b0pqc",
-      "snippet": "What are the most common system scalability issues you encounter? ; 1. Hardware limitations ; 2. Software design ; 3. Data management ; 4. Network"
+      "title": "https://scholar.google.com/citations?view_op=view_...",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=65yxbPsAAAAJ&citation_for_view=65yxbPsAAAAJ:Tyk-4Ss8FVUC",
+      "snippet": "No information is available for this page. · Learn why"
     },
     {
-      "title": "Most Common Top 6 Challenges Faced During Scaling Agile",
-      "url": "https://premieragile.com/scaling-agile-challenges/",
-      "snippet": "Agile works effectively with a small number of teams ranging from 4 to 10, but as organizations resort to the adoption of Agile software development methods and also the execution of large and complex projects, the number of teams involved in Agile increased and also the scaling of Agile. Scaling Agile methods are easy, flexible, and can easily cater to all the needs of the organization and it also helps in innovation in a world of ever-changing requirements. Being able to understand the challenges could help to assist organizations in focusing on how to overcome some of the challenges to benefit fully from the chosen scaled Agile methods and scaling frameworks. Some organizations and software engineers who are not experienced or knowledgeable enough on how Agile works will find it very difficult or challenging to scale Agile. Implementing a scaled Agile will go a long way to help organizations execute large and complex projects. The use of scaled Agile methods and frameworks comes with its challenges and benefits."
+      "title": "Calendar - IfSE - incose uk",
+      "url": "https://ifse.org.uk/Program_Files/Calendar/Calendar?CatID=Events&NoOfRows=9999999",
+      "snippet": "Annual Systems Engineering Conference 2026. The Annual Systems Engineering Conference (ASEC) is the UK's premier Systems Engineering event, attracting a wide"
     },
     {
-      "title": "Scalability in System Design - GeeksforGeeks",
-      "url": "https://www.geeksforgeeks.org/system-design/what-is-scalability/",
-      "snippet": "Factors Affecting Scalability · 1. Performance Bottlenecks · 2. Resource Utilization · 3. Network Latency · 4. Data Storage and Access · 5."
+      "title": "Systems, methods and articles for assessing and/or improving ...",
+      "url": "https://patents.google.com/patent/US20200200416A1/en",
+      "snippet": "In some embodiments, apparatuses and methods are provided herein useful to assess monitor, improve, and/or modify health and well-being as it relates to"
+    },
+    {
+      "title": "Download allocations list - NAIRR Pilot",
+      "url": "https://nairrpilot.org/pilotallocations/q/awards",
+      "snippet": "The project will evaluate cross-platform applications linking online discussions to real-world outcomes and will release datasets, models, and tools to support responsible social computing research.\",2026-04-06,2027-04-05,\"Wang, Yu\",\"University of Oregon\",\"Purdue Anvil AI\",HPC,\"GPU Hours\",10100.0. The central objective of this proposal is to request HPC resources that are necessary to develop, train and validate transformer-based AI models.\",2024-04-22,2026-05-31,\"witharana, chandi\",\"University of Connecticut\",\"TACC Frontera GPU\",HPC,\"Node Hours\",110000.0. NAIRR240052,\"NAIRR Pilot\",\"Artificial Intelligence and Intelligent Systems\",\"Pre-training a generative selective state space model, the Mamba model, on UCSF-specific deidentified clinical notes and time-series structured data\",\"While large language models (LLMs) have made unprecedented advances in the general domain, their advances in medicine are limited by access to large datasets and advanced computing infrastructure. In this proposal, we aim to create new AI models, fine-tune existing LLMs for biomedical tasks, evaluate various communication, privacy and performance issues inherent in FL.\",2024-04-22,2024-10-22,\"Madduri, Ravi\",\"Argonne National Laboratory\",\"TACC Frontera GPU\",HPC,\"Node Hours\",3750.0. In this proposal, we aim to create new AI models, fine-tune existing LLMs for biomedical tasks, evaluate various communication, privacy and performance issues inherent in FL.\",2024-04-22,2024-10-22,\"Madduri, Ravi\",\"Argonne National Laboratory\",\"TACC Lonestar6-GPU\",HPC,\"Node Hours\",3750.0."
+    },
+    {
+      "title": "Machine Learning Engineer Course | Liora x Sorbonne",
+      "url": "https://liora.io/en/courses/data-ai/machine-learning-engineer",
+      "snippet": "It is also a project **highly appreciated by companies** because it ensures the **quality of the training** and the knowledge acquired at the end of the Machine Learning Engineer training since the use of soft-skills is also very present. These prerequisites exist because although the training is centered on data science, and not mathematics, these are necessary for a good understanding of the logical principles of the concepts covered.Furthermore, programming is essential for the development and production of any machine learning project. • Learn how to manage and preprocess text data for analysis and modeling. • Present the complete lifecycle of a machine learning project, from development to deployment. • Introduce Jenkins as a tool for automation and continuous integration in machine learning pipelines. • Introduce the concepts of packaging, managing, and deploying machine learning models using BentoML. • Learn how to build Docker containers containing trained models and deploy them with BentoML. • Discover AWS Cloud tools relevant to data and machine learning workflows."
     }
   ]
 }

@@ -12,7 +12,7 @@ app = typer.Typer(add_completion=False)
 @app.command()
 def main(
     query: str,
-    max_results: int = typer.Option(3, min=1, help="Top results per subquestion."),
+    max_results: int = typer.Option(5, min=1, help="Top results per subquestion."),
     max_notes: int = typer.Option(
         4, min=1, help="Max extracted evidence notes per subquestion."
     ),

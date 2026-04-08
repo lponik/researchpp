@@ -1,137 +1,110 @@
 {
-  "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?": [
+  "What are the cost implications of implementing RAG versus long-context prompting in enterprise Q&A systems?": [
     {
-      "subquestion": "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?",
-      "source_title": "Balancing Cost and Performance: A Comparative Study of RAG and ...",
+      "subquestion": "What are the cost implications of implementing RAG versus long-context prompting in enterprise Q&A systems?",
+      "source_title": "What Is Flat-Rate Long-Context Pricing? How Anthropic ...",
+      "source_url": "https://www.mindstudio.ai/blog/flat-rate-long-context-pricing-anthropic-claude/",
+      "key_point": "Flat-rate pricing reduces per-token costs in long-context models.",
+      "evidence": "For internal tools, document analysis workflows, or knowledge bases that a small number of users query a few hundred times per day, the total cost of owning a RAG pipeline often exceeds the token cost of a long-context approach.",
+      "relevance_reason": "This directly addresses the cost implications of RAG versus long-context approaches in production workloads.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What are the cost implications of implementing RAG versus long-context prompting in enterprise Q&A systems?",
+      "source_title": "A Comparative Study of RAG and Long-Context LLMs",
       "source_url": "https://ai.plainenglish.io/balancing-cost-and-performance-a-comparative-study-of-rag-and-long-context-llms-f674f2a1bbf4",
-      "key_point": "Long context yields better results at higher costs.",
-      "evidence": "Long context gets better results for each model than RAG.",
-      "relevance_reason": "Directly compares the outcomes and efficiency of RAG vs long-context prompting.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?",
-      "source_title": "What Is Flat-Rate Long-Context Pricing? How Anthropic Changed ...",
-      "source_url": "https://www.mindstudio.ai/blog/flat-rate-long-context-pricing-anthropic-claude/",
-      "key_point": "RAG's total cost can exceed that of long-context approaches in certain scenarios.",
-      "evidence": "The total cost of owning a RAG pipeline often exceeds the token cost of a long-context approach for low-volume queries.",
-      "relevance_reason": "Explains when RAG may be less economical compared to long-context prompting.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "What are the cost implications of implementing RAG compared to long-context prompting in enterprise Q&A systems?",
-      "source_title": "What Is Flat-Rate Long-Context Pricing? How Anthropic Changed ...",
-      "source_url": "https://www.mindstudio.ai/blog/flat-rate-long-context-pricing-anthropic-claude/",
-      "key_point": "Flat-rate pricing in long-context prevents cost escalation based on prompt length.",
-      "evidence": "Flat-rate pricing removes the depth penalty and charges the same per-token rate at every position in the context window.",
-      "relevance_reason": "Highlights an advantage of long-context approaches in managing costs.",
+      "key_point": "Quantifies trade-offs in performance and computational cost.",
+      "evidence": "The paper highlights the trade-offs between performance and computational cost, indicating that RAG offers distinct financial implications compared to long-context models.",
+      "relevance_reason": "Clearly compares cost factors related to performance, essential for understanding implementation costs.",
       "confidence_score": null
     }
   ],
-  "How does latency differ between RAG and long-context prompting in real-world applications?": [
+  "How do latency times compare between RAG and long-context prompting in delivering answers in enterprise settings?": [
     {
-      "subquestion": "How does latency differ between RAG and long-context prompting in real-world applications?",
-      "source_title": "RAG vs Large Context Window: Real Trade-offs for AI Apps - Redis",
-      "source_url": "https://redis.io/blog/rag-vs-large-context-window-ai-apps/",
-      "key_point": "RAG achieves lower latency for interactive use cases.",
-      "evidence": "Well-optimized RAG pipelines can often maintain response times under 2 seconds, while naive long-context prompting may struggle with larger inputs.",
-      "relevance_reason": "Directly compares latency performance of RAG and long-context models in real applications.",
+      "subquestion": "How do latency times compare between RAG and long-context prompting in delivering answers in enterprise settings?",
+      "source_title": "How Long-Context LLMs are Challenging Traditional RAG Pipelines | by Jagadeesan Ganesh | Medium",
+      "source_url": "https://medium.com/@jagadeesan.ganesh/how-long-context-llms-are-challenging-traditional-rag-pipelines-93d6eb45398a",
+      "key_point": "Long-context LLMs exhibit lower latency in single-pass tasks.",
+      "evidence": "Long-context LLMs show superior performance with reduced response times for tasks like question-answering and summarization.",
+      "relevance_reason": "Directly compares latency performance of long-context LLMs versus RAG in enterprise scenarios.",
       "confidence_score": null
     },
     {
-      "subquestion": "How does latency differ between RAG and long-context prompting in real-world applications?",
-      "source_title": "Long Context vs RAG for Real Apps - Compute with Hivenet",
-      "source_url": "https://compute.hivenet.com/post/long-context-vs-rag",
-      "key_point": "Long context models can manage extensive inputs in one go.",
-      "evidence": "Long-context LLMs handle context windows up to a million tokens, allowing them to maintain an overview of large data sets during a single inference.",
-      "relevance_reason": "Highlights how long-context models manage data differently, implying potential latency impact.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "How does latency differ between RAG and long-context prompting in real-world applications?",
-      "source_title": "RAG vs Long-Context LLMs: Approaches for Real-World Applications",
-      "source_url": "https://www.premai.io/blog/rag-vs-long-context-llms-approaches-for-real-world-applications",
-      "key_point": "RAG enhances speed with selective retrieval.",
-      "evidence": "RAG retrieves relevant external documents dynamically, which may reduce latency compared to processing all context in long-context models.",
-      "relevance_reason": "Clarifies how RAG's mechanism may contribute to lower latency by avoiding unnecessary processing.",
+      "subquestion": "How do latency times compare between RAG and long-context prompting in delivering answers in enterprise settings?",
+      "source_title": "RAG vs Long Context: Best Choice for AI Systems 2026",
+      "source_url": "https://alphacorp.ai/blog/is-rag-still-worth-it-in-the-age-of-million-token-context-windows",
+      "key_point": "RAG ensures sub-3-second responses for dynamic data environments.",
+      "evidence": "RAG is favored for scenarios needing rapid replies under 3 seconds, especially when data changes frequently and various user permissions are needed.",
+      "relevance_reason": "Specifies RAG's performance in terms of latency for enterprise applications, directly pertinent to the subquestion.",
       "confidence_score": null
     }
   ],
-  "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?": [
+  "What metrics can be used to evaluate answer quality between RAG and long-context prompting methods?": [
     {
-      "subquestion": "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?",
-      "source_title": "How to Evaluate RAG Systems: Metrics, Methods, and What ... - Comet",
+      "subquestion": "What metrics can be used to evaluate answer quality between RAG and long-context prompting methods?",
+      "source_title": "How to Evaluate RAG Systems: Metrics, Methods, and ... - Comet",
       "source_url": "https://www.comet.com/site/blog/rag-evaluation/",
-      "key_point": "Key evaluation metrics for RAG include context precision and context recall.",
-      "evidence": "Context precision penalizes systems for ranking relevant documents lower; context recall measures if the retriever surfaced all relevant information needed for answers.",
-      "relevance_reason": "Offers direct metrics for evaluating answer quality relevant to RAG systems.",
+      "key_point": "Context precision and recall metrics are key for evaluating RAG.",
+      "evidence": "Context precision penalizes systems that rank relevant documents lower, while context recall measures whether the retriever surfaced all the relevant information the expected answer requires.",
+      "relevance_reason": "Explicitly discusses metrics critical for evaluating RAG systems, focusing on retriever performance in terms of precision and recall.",
       "confidence_score": null
     },
     {
-      "subquestion": "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?",
-      "source_title": "Evaluating The Quality Of RAG & Long-Context LLM Output",
-      "source_url": "https://cobusgreyling.substack.com/p/evaluating-the-quality-of-rag-and",
-      "key_point": "Salesforce evaluated multiple LLMs and RAG systems, indicating challenges in specific metrics.",
-      "evidence": "Their results show SummHay is still a challenge, highlighting the complexity in evaluating long-context outputs and RAG.",
-      "relevance_reason": "Provides insights into the evaluation landscape for RAG and long-context prompting systems.",
+      "subquestion": "What metrics can be used to evaluate answer quality between RAG and long-context prompting methods?",
+      "source_title": "Best Practices for Evaluating RAG Systems",
+      "source_url": "https://www.patronus.ai/llm-testing/rag-evaluation-metrics",
+      "key_point": "RAG evaluation involves measuring context retrieval and generation response.",
+      "evidence": "Typical metrics like context relevancy, context sufficiency, answer relevance, hallucination, etc., provide valuable information while evaluating RAG Systems.",
+      "relevance_reason": "Identifies several specific metrics useful in assessing the quality of RAG systems in contrast to long-context methods.",
       "confidence_score": null
     },
     {
-      "subquestion": "What metrics can be used to evaluate answer quality in RAG versus long-context prompting systems?",
-      "source_title": "What metrics are you actually using to evaluate RAG quality? And ...",
-      "source_url": "https://www.reddit.com/r/Rag/comments/1ri0mnl/what_metrics_are_you_actually_using_to_evaluate/",
-      "key_point": "Evaluation based on percentage of literal keyword hits can be informative.",
-      "evidence": "Requires defining a list of expected keywords per response to assess the accuracy of RAG outputs.",
-      "relevance_reason": "Suggests a specific metric that can be applied in RAG evaluation.",
+      "subquestion": "What metrics can be used to evaluate answer quality between RAG and long-context prompting methods?",
+      "source_title": "RAG Evaluation Metrics: Assessing Answer Relevancy ...",
+      "source_url": "https://www.confident-ai.com/blog/rag-evaluation-metrics-answer-relevancy-faithfulness-and-more",
+      "key_point": "Contextual recall, precision, and faithfulness are vital metrics.",
+      "evidence": "The contextual relevancy metric uses LLM-as-a-judge to quantify the proportion of retrieved text chunks that are relevant to the input.",
+      "relevance_reason": "Provides insights into metrics for evaluating the retrieval aspect of RAG effectiveness compared to long-context methods.",
+      "confidence_score": null
+    },
+    {
+      "subquestion": "What metrics can be used to evaluate answer quality between RAG and long-context prompting methods?",
+      "source_title": "Mastering RAG Evaluation: Metrics, Testing & Best Practices",
+      "source_url": "https://medium.com/@adnanmasood/mastering-rag-evaluation-metrics-testing-best-practices-8c384b13e7e1",
+      "key_point": "Evaluating retrieval quality is crucial in RAG.",
+      "evidence": "Retrieval quality measures whether the system finds the right evidence; judge retrieved context via manual review or LLM-as-a-judge for relevance.",
+      "relevance_reason": "Highlights the importance of retrieval quality as a fundamental metric, which differentiates RAG from long-context prompting.",
       "confidence_score": null
     }
   ],
-  "Are there specific use cases where one approach significantly outperforms the other?": [
+  "In what scenarios might one method be preferred over the other based on the identified tradeoffs?": [
     {
-      "subquestion": "Are there specific use cases where one approach significantly outperforms the other?",
-      "source_title": "Doing AI vs. Using AI: Two Approaches to Rationalize Adoption ...",
-      "source_url": "https://www.insight.com/en_US/content-and-resources/blog/doing-ai-vs-using-ai-two-approaches-to-rationalize-adoption-and-boost-roi.html",
-      "key_point": "Each method caters to specific requirements and resources.",
-      "evidence": "Both offer unique advantages and use cases.",
-      "relevance_reason": "This highlights the performance differences between two approaches in specific scenarios.",
+      "subquestion": "In what scenarios might one method be preferred over the other based on the identified tradeoffs?",
+      "source_title": "All three options require some trade-offs on time and cost as well as ...",
+      "source_url": "https://www.coursehero.com/tutors-problems/Business-Other/60077108-All-three-options-require-some-trade-offs-on-time-and-cost-as-well/",
+      "key_point": "Option 3 preferred when time to market is critical.",
+      "evidence": "If time to market is critical, and the company can absorb higher costs, Option 3 could be the preferred choice.",
+      "relevance_reason": "Directly compares the preference for Option 3 based on urgency vs cost.",
       "confidence_score": null
     },
     {
-      "subquestion": "Are there specific use cases where one approach significantly outperforms the other?",
-      "source_title": "How one approach to M&A is more likely to create value than all others",
-      "source_url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-one-approach-to-m-and-a-is-more-likely-to-create-value-than-all-others",
-      "key_point": "A programmatic approach is most likely to create value compared to other M&A strategies.",
-      "evidence": "When compared with other types of M&A strategies, a programmatic approach is most likely to create value.",
-      "relevance_reason": "This indicates that the programmatic approach has a superior performance in a specific context of M&A.",
+      "subquestion": "In what scenarios might one method be preferred over the other based on the identified tradeoffs?",
+      "source_title": "Trade Off Methodologies - B3 Intelligence",
+      "source_url": "https://www.b3intelligence.com/knowledge-center/trade-off-methodologies/",
+      "key_point": "Max-diff and conjoint analysis provide different insights.",
+      "evidence": "Max-diff and conjoint analysis are both statistical techniques used in trade-off analysis. However, the methods provide different insights.",
+      "relevance_reason": "Demonstrates trade-offs in different analytical approaches, which can inform method preference based on required insights.",
       "confidence_score": null
     }
   ],
-  "What are the potential scalability issues associated with each of the methodologies?": [
+  "What are the potential impacts of tradeoffs on user satisfaction and system performance in enterprise Q&A systems?": [
     {
-      "subquestion": "What are the potential scalability issues associated with each of the methodologies?",
-      "source_title": "What are the most common system scalability issues you encounter?",
-      "source_url": "https://www.linkedin.com/advice/0/what-most-common-system-scalability-issues-b0pqc",
-      "key_point": "Hardware limitations, software design, data management, and network are key scalability issues.",
-      "evidence": "1. Hardware limitations ; 2. Software design ; 3. Data management ; 4. Network",
-      "relevance_reason": "Identifies various common scalability issues pertinent to system methodologies.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "What are the potential scalability issues associated with each of the methodologies?",
-      "source_title": "Most Common Top 6 Challenges Faced During Scaling Agile",
-      "source_url": "https://premieragile.com/scaling-agile-challenges/",
-      "key_point": "Scaling Agile can be challenging due to lack of experience with large teams.",
-      "evidence": "Organizations and software engineers not experienced in Agile find it challenging to scale Agile.",
-      "relevance_reason": "Highlights specific challenges faced when scaling Agile methodologies.",
-      "confidence_score": null
-    },
-    {
-      "subquestion": "What are the potential scalability issues associated with each of the methodologies?",
-      "source_title": "Scalability in System Design - GeeksforGeeks",
-      "source_url": "https://www.geeksforgeeks.org/system-design/what-is-scalability/",
-      "key_point": "Performance bottlenecks and resource utilization affect scalability.",
-      "evidence": "Factors Affecting Scalability · 1. Performance Bottlenecks · 2. Resource Utilization · 3. Network Latency · 4. Data Storage and Access",
-      "relevance_reason": "Discusses critical performance factors that influence scalability in system design methodologies.",
+      "subquestion": "What are the potential impacts of tradeoffs on user satisfaction and system performance in enterprise Q&A systems?",
+      "source_title": "Download allocations list - NAIRR Pilot",
+      "source_url": "https://nairrpilot.org/pilotallocations/q/awards",
+      "key_point": "Quantitative HPC Resource Requirements",
+      "evidence": "Requesting HPC resources includes 10100 GPU hours for developing transformer-based AI models and 110000 node hours for fine-tuning LLMs in biomedical tasks.",
+      "relevance_reason": "The resource allocation details imply that sufficient computing infrastructure is critical for effective AI model development, which can directly impact system performance and user satisfaction in an enterprise Q&A context.",
       "confidence_score": null
     }
   ]

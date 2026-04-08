@@ -6,6 +6,95 @@ from langchain_openai import ChatOpenAI
 from schemas import EvidenceNote, EvidenceNoteList, SearchResult
 
 
+def _contains_any(text: str, markers: tuple[str, ...]) -> bool:
+    haystack = f" {text.lower()} "
+    return any(marker in haystack for marker in markers)
+
+
+def _is_high_value_note(note: EvidenceNote) -> bool:
+    key_point = note.key_point.strip()
+    evidence = note.evidence.strip()
+    relevance_reason = note.relevance_reason.strip()
+
+    if len(evidence.split()) < 10:
+        return False
+
+    key_point_lower = key_point.lower()
+    combined_lower = f"{key_point} {evidence} {relevance_reason}".lower()
+
+    vague_markers = (
+        " may ",
+        " can ",
+        " could ",
+        " tends to ",
+        " helps ",
+        " improves ",
+        " useful ",
+        " generally ",
+        " often ",
+    )
+    if _contains_any(key_point_lower, vague_markers):
+        return False
+
+    generic_markers = (
+        "is important",
+        "is useful",
+        "is beneficial",
+        "plays a role",
+        "widely used",
+        "good for",
+        "helpful for",
+    )
+    if _contains_any(combined_lower, generic_markers):
+        return False
+
+    comparison_markers = (
+        " vs ",
+        " versus ",
+        " compared to ",
+        " faster than ",
+        " slower than ",
+        " lower than ",
+        " higher than ",
+        " more than ",
+        " less than ",
+        " tradeoff ",
+        " trade-off ",
+        " whereas ",
+        " outperforms ",
+        " underperforms ",
+    )
+    mechanism_markers = (
+        " because ",
+        " due to ",
+        " retrieval ",
+        " rerank ",
+        " reranking ",
+        " chunk ",
+        " context window ",
+        " token ",
+        " embedding ",
+        " index ",
+        " latency ",
+        " throughput ",
+        " precision ",
+        " recall ",
+        " bottleneck ",
+        " cache ",
+    )
+
+    has_number = any(ch.isdigit() for ch in combined_lower)
+    has_comparison = _contains_any(combined_lower, comparison_markers)
+    has_mechanism = _contains_any(combined_lower, mechanism_markers)
+
+    return has_number or has_comparison or has_mechanism
+
+
+def _filter_high_value_notes(notes: list[EvidenceNote], max_notes: int) -> list[EvidenceNote]:
+    filtered = [note for note in notes if _is_high_value_note(note)]
+    return filtered[:max_notes]
+
+
 def _dedupe_notes(notes: list[EvidenceNote], max_notes: int) -> list[EvidenceNote]:
     """Drop near-duplicate notes and keep only the top N."""
     deduped: list[EvidenceNote] = []
@@ -51,11 +140,26 @@ You are an evidence extraction assistant for a research workflow.
 
 Task:
 - Read the subquestion and provided search results.
-- Extract the strongest, non-duplicative evidence notes.
+- Extract only high-value, non-duplicative evidence notes.
 - Use only the provided search results. Do not use outside knowledge.
-- Ignore irrelevant or weak snippets.
+- Ignore irrelevant, weak, or generic snippets.
 - Each note must map to one source title + one source URL.
 - Keep key_point concise and evidence compact.
+- Only extract evidence that is specific and useful for technical analysis.
+- Prefer evidence with:
+  - quantitative details (numbers, costs, latency, token usage)
+  - explicit comparisons (for example, "RAG is faster than long-context because ...")
+  - concrete claims that can support an argument
+- Avoid evidence that is:
+  - vague summaries
+  - generic statements like "this can be useful"
+  - filler or purely descriptive text
+- If a snippet does NOT contain strong, specific, or comparative evidence, DO NOT extract a note.
+
+Comparison guidance:
+- Prefer evidence that directly compares the approaches in the query.
+- If a snippet discusses only one method, extract it only when it contains strong quantitative or technical insight.
+- Otherwise skip it.
 
 Subquestion:
 {subquestion}
@@ -65,6 +169,7 @@ Search results (JSON):
 
 Output requirements:
 - Return at most {max_notes} notes.
+- Returning fewer notes (including zero) is better than returning weak notes.
 - Return structured notes only for downstream report generation.
 - Do not speculate beyond the provided snippets.
 """.strip()
@@ -77,7 +182,8 @@ Output requirements:
     normalized_notes = [
         note.model_copy(update={"subquestion": subquestion}) for note in extracted.notes
     ]
-    return _dedupe_notes(normalized_notes, max_notes=max_notes)
+    filtered_notes = _filter_high_value_notes(normalized_notes, max_notes=max_notes)
+    return _dedupe_notes(filtered_notes, max_notes=max_notes)
 
 
 def run_extractor(

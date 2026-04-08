@@ -179,7 +179,7 @@ _WORKFLOW = _build_workflow()
 
 def run_research_workflow(
     user_query: str,
-    max_results: int = 3,
+    max_results: int = 5,
     max_notes: int = 4,
     report_title: str | None = None,
     report_output: str | None = None,
