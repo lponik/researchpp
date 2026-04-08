@@ -212,6 +212,30 @@ def run_extractor(
     return grouped_notes
 
 
+def identify_failed_subquestions(
+    grouped_results: dict[str, list[SearchResult]],
+    grouped_notes: dict[str, list[EvidenceNote]],
+    ordered_subquestions: list[str] | None = None,
+) -> list[str]:
+    """
+    Mark subquestions that still need research support.
+
+    A subquestion is considered failed when it has no search results or no extracted notes.
+    """
+    subquestions = (
+        ordered_subquestions
+        if ordered_subquestions is not None
+        else list(grouped_results.keys())
+    )
+
+    failed_subquestions: list[str] = []
+    for subquestion in subquestions:
+        if not grouped_results.get(subquestion) or not grouped_notes.get(subquestion):
+            failed_subquestions.append(subquestion)
+
+    return failed_subquestions
+
+
 def _extract_one_subquestion(
     item: tuple[str, list[SearchResult]],
     max_notes: int,

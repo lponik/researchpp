@@ -3,7 +3,7 @@ from typing import TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
-from extractor import run_extractor, save_evidence_notes
+from extractor import identify_failed_subquestions, run_extractor, save_evidence_notes
 from planner import generate_research_plan
 from reviewer import review_report, save_review_decision
 from schemas import EvidenceNote, ResearchPlan, ReviewDecision, SearchResult
@@ -32,6 +32,7 @@ class ResearchWorkflowState(TypedDict, total=False):
     review_output_path: str
     final_report_path: str
     retry_triggered: bool
+    failed_subquestions: list[str]
 
 
 def _planner_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
@@ -40,23 +41,88 @@ def _planner_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
 
 
 def _searcher_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
-    grouped_results = run_searcher(plan=state["plan"], max_results=state["max_results"])
-    search_path = save_search_results(grouped_results)
+    all_subquestions = list(state["plan"].subquestions)
+    previous_results = dict(state.get("search_results", {}))
+    failed_subquestions = state.get("failed_subquestions", [])
+    failed_lookup = set(failed_subquestions)
+
+    # On retry, only refresh weak subquestions when we have a clear failure list.
+    is_targeted_retry = state.get("retry_count", 0) > 0 and bool(failed_subquestions)
+    subquestions_to_search = (
+        [subquestion for subquestion in all_subquestions if subquestion in failed_lookup]
+        if is_targeted_retry
+        else all_subquestions
+    )
+
+    if is_targeted_retry:
+        print(f"Targeted search retry for {len(subquestions_to_search)} subquestions")
+
+    updated_results = run_searcher(
+        plan=state["plan"],
+        max_results=state["max_results"],
+        subquestions=subquestions_to_search,
+    )
+
+    merged_results = previous_results if is_targeted_retry else {}
+    for subquestion in subquestions_to_search:
+        merged_results[subquestion] = updated_results.get(subquestion, [])
+
+    # Keep full grouped structure so artifacts always represent complete state.
+    ordered_results = {
+        subquestion: merged_results.get(subquestion, []) for subquestion in all_subquestions
+    }
+
+    search_path = save_search_results(ordered_results)
     return {
-        "search_results": grouped_results,
+        "search_results": ordered_results,
         "search_results_path": str(search_path),
     }
 
 
 def _extractor_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
-    grouped_notes = run_extractor(
-        grouped_results=state["search_results"],
+    all_subquestions = list(state["plan"].subquestions)
+    previous_notes = dict(state.get("extracted_notes", {}))
+    failed_subquestions = state.get("failed_subquestions", [])
+    failed_lookup = set(failed_subquestions)
+
+    # Retry only weak subquestions to avoid recomputing strong areas.
+    is_targeted_retry = state.get("retry_count", 0) > 0 and bool(failed_subquestions)
+    subquestions_to_extract = (
+        [subquestion for subquestion in all_subquestions if subquestion in failed_lookup]
+        if is_targeted_retry
+        else all_subquestions
+    )
+
+    if is_targeted_retry:
+        print(f"Targeted extraction retry for {len(subquestions_to_extract)} subquestions")
+
+    extraction_input = {
+        subquestion: state["search_results"].get(subquestion, [])
+        for subquestion in subquestions_to_extract
+    }
+    updated_notes = run_extractor(
+        grouped_results=extraction_input,
         max_notes_per_subquestion=state["max_notes"],
     )
-    notes_path = save_evidence_notes(grouped_notes)
+
+    merged_notes = previous_notes if is_targeted_retry else {}
+    for subquestion in subquestions_to_extract:
+        merged_notes[subquestion] = updated_notes.get(subquestion, [])
+
+    ordered_notes = {
+        subquestion: merged_notes.get(subquestion, []) for subquestion in all_subquestions
+    }
+    failed_after_extraction = identify_failed_subquestions(
+        grouped_results=state["search_results"],
+        grouped_notes=ordered_notes,
+        ordered_subquestions=all_subquestions,
+    )
+
+    notes_path = save_evidence_notes(ordered_notes)
     return {
-        "extracted_notes": grouped_notes,
+        "extracted_notes": ordered_notes,
         "notes_output_path": str(notes_path),
+        "failed_subquestions": failed_after_extraction,
     }
 
 
@@ -107,6 +173,13 @@ def _prepare_retry_node(state: ResearchWorkflowState) -> ResearchWorkflowState:
     review = state["review_decision"]
     retry_reason = "search" if review.needs_more_research else "write"
     print(f"Retry triggered: {retry_reason}")
+    if review.needs_more_research:
+        failed_subquestions = state.get("failed_subquestions", [])
+        if failed_subquestions:
+            joined = ", ".join(failed_subquestions)
+            print(f"Retrying {len(failed_subquestions)} failed subquestions: {joined}")
+        else:
+            print("Retrying research for all subquestions")
     return {
         "retry_count": state.get("retry_count", 0) + 1,
         "retry_triggered": True,
@@ -195,6 +268,7 @@ def run_research_workflow(
         "report_title": report_title,
         "report_output": report_output,
         "retry_triggered": False,
+        "failed_subquestions": [],
     }
     final_state = _WORKFLOW.invoke(
         initial_state,

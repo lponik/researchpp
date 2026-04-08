@@ -54,23 +54,27 @@ def search_subquestion(subquestion: str, max_results: int = 3) -> list[SearchRes
 
 
 def run_searcher(
-    plan: ResearchPlan, max_results: int = 3
+    plan: ResearchPlan,
+    max_results: int = 3,
+    subquestions: list[str] | None = None,
 ) -> dict[str, list[SearchResult]]:
-    """Run deterministic search over every planner subquestion."""
-    subquestions = list(plan.subquestions)
-    if not subquestions:
+    """Run deterministic search over every planner subquestion or a provided subset."""
+    target_subquestions = (
+        list(subquestions) if subquestions is not None else list(plan.subquestions)
+    )
+    if not target_subquestions:
         return {}
 
-    print(f"Running search for {len(subquestions)} subquestions in parallel")
+    print(f"Running search for {len(target_subquestions)} subquestions in parallel")
 
     # Searches are independent and mostly I/O-bound, so thread fan-out is safe.
-    max_workers = min(8, len(subquestions))
+    max_workers = min(8, len(target_subquestions))
     grouped_results: dict[str, list[SearchResult]] = {}
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         for subquestion, results in executor.map(
             _search_one_subquestion,
-            subquestions,
-            [max_results] * len(subquestions),
+            target_subquestions,
+            [max_results] * len(target_subquestions),
         ):
             grouped_results[subquestion] = results
 
