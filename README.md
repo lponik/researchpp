@@ -124,8 +124,11 @@ uv sync
 Create `.env` with required keys:
 
 ```bash
-OPENAI_API_KEY=...
-TAVILY_API_KEY=...
+OPENAI_API_KEY=
+TAVILY_API_KEY=
+LANGSMITH_API_KEY=
+LANGSMITH_TRACING=
+LANGSMITH_PROJECT=
 ```
 
 `main.py` calls `load_dotenv()`, so these are read automatically at runtime.
